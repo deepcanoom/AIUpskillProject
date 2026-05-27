@@ -2075,7 +2075,7 @@ You'll build your first AI agent using the clean architecture you just created!
 
 **What you'll learn:**
 - AI agent architecture
-- Google ADK integration
+- LiteLLM integration (provider-agnostic LLM access)
 - Prompt engineering
 - Function calling / tool use
 

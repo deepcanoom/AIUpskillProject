@@ -25,11 +25,11 @@ By the end of this evening, you will:
 7:30 PM - Start
 ├── 7:30-7:45 PM (15 min) - Clone repo & read README
 ├── 7:45-8:00 PM (15 min) - Create venv & install dependencies
-├── 8:00-8:20 PM (20 min) - Get API keys
-├── 8:20-8:30 PM (10 min) - Configure .env file
-├── 8:30-8:40 PM (10 min) - Run automated verification
-└── 8:40-9:00 PM (20 min) - Read architecture overview
-9:00 PM - Done! ✅
+├── 8:00-8:15 PM (15 min) - Get an LLM API key
+├── 8:15-8:25 PM (10 min) - Configure .env file
+├── 8:25-8:35 PM (10 min) - Run automated verification
+└── 8:35-8:55 PM (20 min) - Read architecture overview
+8:55 PM - Done! ✅
 ```
 
 **No coding tonight** - save your energy for tomorrow!
@@ -43,8 +43,8 @@ By the end of this evening, you will:
 ```bash
 # Clone to your preferred location
 cd ~/projects  # or wherever you keep code
-git clone https://github.com/your-org/ai-agent-onboarding.git
-cd ai-agent-onboarding
+git clone https://github.com/BLEND360/AIUpskillProject.git
+cd AIUpskillProject
 ```
 
 ### **Step 2: Explore the structure**
@@ -115,11 +115,11 @@ pip install -r requirements.txt
 # This installs:
 # - aiohttp (async HTTP)
 # - feedparser (RSS parsing)
-# - google-generativeai (Google ADK)
+# - litellm (LLM provider abstraction — Anthropic / OpenAI / Gemini / etc.)
 # - mcp (Model Context Protocol)
-# - pytest (testing)
-# - black, isort, pylint (code quality)
-# - and more...
+# - pytest, pytest-asyncio, pytest-cov (testing)
+# - ruff (formatting + linting in one tool)
+# - python-dotenv (load .env)
 
 # Should take 2-3 minutes
 ```
@@ -139,39 +139,41 @@ python -c "import aiohttp; import feedparser; print('✅ Core packages installed
 
 ---
 
-## ✅ Task 3: Get API Keys (20 minutes)
+## ✅ Task 3: Get an LLM API Key (15 minutes)
 
-You need 2 free API keys. Both have generous free tiers.
+The curriculum uses **LiteLLM** as an LLM provider abstraction, so you can
+pick whichever provider you want — Anthropic, OpenAI, Gemini, or any of the
+[100+ providers LiteLLM supports](https://docs.litellm.ai/docs/providers).
+You only need **one** key.
 
-### **API Key 1: NewsAPI (5 min)**
+The curriculum's default is `claude-haiku-4-5-20251001` (Anthropic Claude
+Haiku 4.5). It's cheap (~$1.50 total for the whole curriculum at typical
+usage) and Anthropic gives new accounts a $5 trial credit, so you can do the
+entire project without paying anything.
 
-**Purpose:** Fetch news articles
-
-**Steps:**
-1. Go to: https://newsapi.org/
-2. Click "Get API Key"
-3. Sign up (free account)
-4. Copy your API key
-
-**Free tier:** 100 requests/day (plenty for learning!)
-
-### **API Key 2: Google AI Studio (15 min)**
-
-**Purpose:** Access Gemini for AI agents
+### **Recommended: Anthropic Claude (5 min)**
 
 **Steps:**
-1. Go to: https://ai.google.dev/
-2. Click "Get started"
-3. Sign in with Google account
-4. Click "Get API key" in AI Studio
-5. Create new API key
-6. Copy the key
+1. Go to: https://console.anthropic.com/
+2. Sign up (free; new accounts get $5 trial credit)
+3. Settings → API Keys → Create Key
+4. Copy the key (starts with `sk-ant-...`)
 
-**Free tier:** 60 requests/minute (excellent for learning!)
+Use the default `LITELLM_MODEL=claude-haiku-4-5-20251001` in your `.env`.
 
-**Save both keys** - you'll use them in next step.
+### **Alternatives**
 
-**Time check:** ✅ Should be ~8:20 PM (50 min used)
+If you'd rather use a different provider, sign up below and update both
+`LITELLM_MODEL` and the matching key in your `.env` (see Task 4):
+
+| Provider | Model string | Signup | Notes |
+|----------|--------------|--------|-------|
+| OpenAI | `gpt-4o-mini` | https://platform.openai.com/ | Requires credit card. Cheap. |
+| Google Gemini | `gemini/gemini-2.0-flash` | https://ai.google.dev/ | Free tier (60 RPM, no token cap). |
+
+**Save your key** — you'll paste it into `.env` in the next task.
+
+**Time check:** ✅ Should be ~8:15 PM (45 min used)
 
 ---
 
@@ -187,23 +189,29 @@ cp .env.example .env
 code .env  # or your editor
 ```
 
-### **Step 2: Add your API keys**
+### **Step 2: Add your API key**
 
-Edit `.env`:
+Edit `.env`. The file ships pre-configured for Claude Haiku — if you picked
+that provider in Task 3, just paste your Anthropic key:
 
 ```bash
 # .env file
 
-# NewsAPI - paste your key here
-NEWSAPI_KEY=your_newsapi_key_here
+# Model the curriculum points at (default is Claude Haiku 4.5).
+LITELLM_MODEL=claude-haiku-4-5-20251001
 
-# Google AI - paste your key here
-GOOGLE_API_KEY=your_google_api_key_here
+# Paste the Anthropic key you copied in Task 3.
+ANTHROPIC_API_KEY=sk-ant-your_key_here
+# OPENAI_API_KEY=
+# GEMINI_API_KEY=
 
-# These are fine as defaults
+# Fine as defaults
 ENVIRONMENT=development
 LOG_LEVEL=INFO
 ```
+
+If you picked OpenAI or Gemini instead, change `LITELLM_MODEL` to the model
+string from Task 3's alternatives table and uncomment/fill the matching key.
 
 ### **Step 3: Verify .env is ignored**
 
@@ -220,7 +228,7 @@ cat .gitignore | grep .env
 
 **IMPORTANT:** Never commit `.env` to git! Your keys are secrets.
 
-**Time check:** ✅ Should be ~8:30 PM (60 min used)
+**Time check:** ✅ Should be ~8:25 PM (55 min used)
 
 ---
 
@@ -234,16 +242,18 @@ python scripts/verify_setup.py
 
 # This checks:
 # ✅ Python version
+# ✅ Virtual environment active
 # ✅ Dependencies installed
-# ✅ API keys configured
+# ✅ API key configured
 # ✅ Directory structure
 # ✅ Import paths work
+# ✅ LiteLLM can reach the configured model (real network call)
 ```
 
 ### **Expected output:**
 
 ```
-🔍 Verifying AI Agent Onboarding Setup...
+🔍 Verifying AI Upskill Project setup...
 
 ✅ Python version: 3.11.5
 ✅ Virtual environment: Active
@@ -251,13 +261,14 @@ python scripts/verify_setup.py
 ✅ API keys: Configured
 ✅ Project structure: Valid
 ✅ Import paths: Working
+✅ LiteLLM (claude-haiku-4-5-20251001): Working
 
 🎉 Setup complete! Ready to start Milestone 1.
 
 Next steps:
 1. Read docs/architecture/overview.md
 2. Start Milestone 1 tomorrow
-3. Join Slack: #ai-agent-onboarding-cohort-[X]
+3. Join Slack: #ai-upskill-cohort-[X]
 ```
 
 ### **If you see errors:**
@@ -273,14 +284,16 @@ Next steps:
 pip install -r requirements.txt
 ```
 
-**API keys not found:**
+**API key not found:**
 ```bash
-# Check .env file has both keys
-# No quotes needed around keys
+# Check .env file has your provider key set:
+#   ANTHROPIC_API_KEY=sk-ant-...  (or OPENAI_API_KEY / GEMINI_API_KEY)
+# No quotes needed around the key
 # No spaces around =
+# LITELLM_MODEL must match the provider whose key you set
 ```
 
-**Time check:** ✅ Should be ~8:40 PM (70 min used)
+**Time check:** ✅ Should be ~8:35 PM (65 min used)
 
 ---
 
@@ -311,7 +324,7 @@ code docs/architecture/overview.md
 
 3. **Technology Stack (5 min)**
    - Python + async/await
-   - Google ADK for AI
+   - LiteLLM for LLM access (provider-agnostic)
    - MCP for tools
    - SQLite for data
 
@@ -342,7 +355,7 @@ code docs/architecture/overview.md
 - Week 4: MCP + multi-agent
 - Week 5: Quality
 
-**Time check:** ✅ Should be ~9:00 PM (90 min used)
+**Time check:** ✅ Should be ~8:55 PM (85 min used)
 
 ---
 
@@ -352,16 +365,16 @@ code docs/architecture/overview.md
 
 ✅ Development environment ready  
 ✅ Dependencies installed  
-✅ API keys configured  
+✅ API key configured  
 ✅ Verification passed  
 ✅ Architecture understood  
 
 ### **Your Laptop Now Has:**
 
 ```
-ai-agent-onboarding/
+AIUpskillProject/
 ├── venv/                    # Your isolated environment ✅
-├── .env                     # Your API keys (secret) ✅
+├── .env                     # Your API key (secret) ✅
 ├── src/                     # Ready for your code
 ├── tests/                   # Ready for your tests
 └── data/                    # Will be created automatically
@@ -416,12 +429,12 @@ pip install -r requirements.txt
 **Solution:**
 ```bash
 # Check .env format:
-NEWSAPI_KEY=abc123  # No quotes, no spaces around =
+ANTHROPIC_API_KEY=sk-ant-abc123  # No quotes, no spaces around =
 
-# Test NewsAPI:
-curl "https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_KEY"
+# Test the key directly with LiteLLM:
+python -c "from litellm import completion; print(completion(model='claude-haiku-4-5-20251001', messages=[{'role':'user','content':'hi'}]).choices[0].message.content)"
 
-# Should return JSON
+# Should print a response.
 ```
 
 ### **"Import errors"**
@@ -440,7 +453,7 @@ which python  # Should point to venv/bin/python
 
 ### **Still stuck?**
 
-Ask in Slack: `#ai-agent-onboarding-cohort-[X]`
+Ask in Slack: `#ai-upskill-cohort-[X]`
 
 Include:
 - Your OS (Mac/Windows/Linux)
@@ -505,7 +518,7 @@ See you tomorrow! 🚀
 
 ---
 
-**Questions?** Ask in Slack: `#ai-agent-onboarding-cohort-[X]`
+**Questions?** Ask in Slack: `#ai-upskill-cohort-[X]`
 
 **Milestone 0 Complete** ✅  
 **Time Spent:** 1-2 hours  

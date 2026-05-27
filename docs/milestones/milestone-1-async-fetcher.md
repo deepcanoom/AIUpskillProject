@@ -1414,7 +1414,7 @@ git commit -m "feat: async news fetcher with HackerNews and RSS support"
 git push origin feature/milestone-1-async-fetcher
 ```
 
-**Post in Slack:** `#ai-agent-onboarding-cohort-[X]`
+**Post in Slack:** `#ai-upskill-cohort-[X]`
 
 ```
 📝 Milestone 1 PR ready for review!
@@ -1518,7 +1518,7 @@ You'll refactor this code to follow professional software design principles!
 
 ---
 
-**Questions?** Ask in Slack: `#ai-agent-onboarding-cohort-[X]`
+**Questions?** Ask in Slack: `#ai-upskill-cohort-[X]`
 
 **Milestone 1 Complete** ✅  
 **Time Spent:** 6-8 hours over 3-4 evenings  

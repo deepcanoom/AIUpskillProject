@@ -90,7 +90,7 @@ Each milestone includes:
 📄 `milestone-3-first-agent.md`
 
 **Evening breakdowns:**
-- **Evening 11:** Google ADK setup + architecture (1.5-2 hrs)
+- **Evening 11:** LiteLLM setup + agent architecture (1.5-2 hrs)
 - **Evening 12:** NewsFilterAgent + prompts (2 hrs)
 - **Evening 13:** Add tool use (2 hrs)
 - **Evening 14:** Testing + integration (1.5-2 hrs)
@@ -280,7 +280,7 @@ Engineers can:
 
 ### **After Week 3:**
 Engineers can:
-- Integrate Google ADK (Gemini)
+- Integrate LiteLLM (provider-agnostic LLM client)
 - Engineer effective prompts
 - Build AI agents
 - Implement function calling

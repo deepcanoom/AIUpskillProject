@@ -399,7 +399,7 @@ If metrics are low, you can:
 **File:** `README.md`
 
 ```markdown
-# AI Agent Onboarding Project
+# AI Upskill Project
 
 **Multi-agent news aggregation system with MCP integration**
 
@@ -408,7 +408,7 @@ A production-ready AI agent pipeline that fetches, filters, summarizes, and writ
 ## Features
 
 - 🚀 **Async News Fetching** from multiple sources (HackerNews, RSS)
-- 🤖 **AI-Powered Filtering** using Gemini LLM
+- 🤖 **AI-Powered Filtering** via LiteLLM (default: Claude Haiku 4.5; swap providers via env var)
 - 🔧 **MCP Integration** with reusable tools
 - 📝 **Multi-Agent Pipeline** (Filter → Summarize → Write)
 - 💾 **SQLite Database** for article storage
@@ -420,15 +420,14 @@ A production-ready AI agent pipeline that fetches, filters, summarizes, and writ
 ### Prerequisites
 
 - Python 3.11+
-- Google API key (free tier)
-- NewsAPI key (free tier)
+- One LLM provider API key (Anthropic recommended; OpenAI, Gemini, or any other [LiteLLM-supported provider](https://docs.litellm.ai/docs/providers) also works)
 
 ### Installation
 
 ```bash
 # Clone repo
-git clone https://github.com/your-org/ai-agent-onboarding.git
-cd ai-agent-onboarding
+git clone https://github.com/BLEND360/AIUpskillProject.git
+cd AIUpskillProject
 
 # Create virtual environment
 python -m venv venv
@@ -439,7 +438,7 @@ pip install -r requirements.txt
 
 # Configure environment
 cp .env.example .env
-# Edit .env and add your API keys
+# Edit .env and add your provider API key
 ```
 
 ### Run Complete Pipeline
@@ -490,7 +489,7 @@ python src/evaluation/evaluator.py
                    ▼
         ┌──────────────────┐
         │  FilterAgent      │
-        │ (Gemini + Tools)  │
+        │   (LLM + Tools)   │
         └──────────┬────────┘
                    │
                    ▼
@@ -512,7 +511,7 @@ python src/evaluation/evaluator.py
 ## Project Structure
 
 ```
-ai-agent-onboarding/
+AIUpskillProject/
 ├── src/
 │   ├── agents/          # AI agents
 │   │   ├── base_agent.py
@@ -520,12 +519,12 @@ ai-agent-onboarding/
 │   │   ├── summarizer_agent.py
 │   │   └── writer_agent.py
 │   ├── fetchers/        # News fetchers
-│   ├── mcp/             # MCP servers
+│   ├── mcp_servers/     # MCP servers
 │   │   ├── database_server.py
 │   │   └── simple_client.py
 │   ├── skills/          # Reusable skills
 │   │   └── search_skill.py
-│   ├── database/        # Database management
+│   ├── tools/           # LLM-callable tools (calculator, web_search)
 │   ├── evaluation/      # Evaluation framework
 │   └── complete_pipeline.py
 ├── tests/               # Test suite
@@ -541,10 +540,11 @@ ai-agent-onboarding/
 
 - **Python 3.11+** - Core language
 - **aiohttp** - Async HTTP requests
-- **Google Generative AI** - LLM (Gemini)
+- **LiteLLM** - LLM provider abstraction (default: Claude Haiku 4.5)
 - **MCP** - Model Context Protocol
 - **SQLite** - Local database
 - **pytest** - Testing framework
+- **ruff** - Formatting + linting
 
 ## Milestones Completed
 
@@ -671,7 +671,7 @@ Multi-agent AI system for news aggregation and newsletter generation.
 
 **NewsFilterAgent:**
 - Filters AI/ML relevant articles
-- Uses Gemini for classification
+- Uses the configured LLM (via LiteLLM) for classification
 - Returns relevance scores
 - JSON output parsing
 
@@ -731,15 +731,15 @@ Fetch → Database → Filter → Summarize → Write
    ↓
 3. Markdown Files + Database
    ↓
-4. FilterAgent (Gemini)
+4. FilterAgent (LLM via LiteLLM)
    ↓
 5. Filtered Markdown
    ↓
-6. SummarizerAgent (Gemini + SearchSkill)
+6. SummarizerAgent (LLM + SearchSkill)
    ↓
 7. Summary Markdown
    ↓
-8. WriterAgent (Gemini)
+8. WriterAgent (LLM)
    ↓
 9. Newsletter Markdown
 ```
@@ -751,10 +751,12 @@ Fetch → Database → Filter → Summarize → Write
 - Rich AI/ML ecosystem
 - Easy to learn and maintain
 
-**Why Gemini?**
-- Free tier generous
-- Good function calling support
-- Fast inference
+**Why LiteLLM + Claude Haiku 4.5?**
+- LiteLLM lets us swap providers via env var — no code changes
+- Claude Haiku is cheap (~$1.50 for the whole curriculum at typical usage)
+- Anthropic's $5 trial credit covers it without paying
+- Solid function-calling and JSON output support
+- Aligns with Blend's broader Claude tooling
 
 **Why SQLite?**
 - No server required
@@ -904,16 +906,16 @@ CMD ["python", "src/complete_pipeline.py"]
 **Build and run:**
 
 ```bash
-docker build -t ai-agent-onboarding .
-docker run -v $(pwd)/data:/app/data ai-agent-onboarding
+docker build -t aiupskillproject .
+docker run -v $(pwd)/data:/app/data aiupskillproject
 ```
 
 ## Configuration
 
 **Environment Variables:**
 
-- `GOOGLE_API_KEY` - Required
-- `NEWSAPI_KEY` - Required
+- `LITELLM_MODEL` - Required (default: `claude-haiku-4-5-20251001`)
+- `ANTHROPIC_API_KEY` (or `OPENAI_API_KEY` / `GEMINI_API_KEY` / etc.) - Required, must match the provider in `LITELLM_MODEL`
 - `ENVIRONMENT` - development/production
 - `LOG_LEVEL` - INFO/DEBUG
 
@@ -1192,7 +1194,7 @@ Ready for portfolio! ✨
 
 ---
 
-**Questions?** Celebrate in Slack: `#ai-agent-onboarding-cohort-[X]`
+**Questions?** Celebrate in Slack: `#ai-upskill-cohort-[X]`
 
 **PROJECT COMPLETE** ✅  
 **Date:** [Your completion date]  

@@ -12,7 +12,7 @@
 
 By the end of this week, you will:
 - Understand AI agent architecture
-- Integrate Google ADK (Gemini)
+- Integrate LiteLLM (provider-agnostic LLM client — Anthropic / OpenAI / Gemini / etc.)
 - Engineer effective prompts
 - Implement function calling / tool use
 - Build NewsFilterAgent that uses tools
@@ -27,7 +27,7 @@ By the end of this week, you will:
 
 ```
 Week 3: AI Agents
-├── Evening 11 (Mon): Google ADK Setup + Agent Architecture
+├── Evening 11 (Mon): LiteLLM Setup + Agent Architecture
 ├── Evening 12 (Tue): NewsFilterAgent + Prompt Engineering
 ├── Evening 13 (Wed): Add Tool Use (Calculator, Search)
 ├── Evening 14 (Thu): Test Agent Behavior
@@ -46,29 +46,30 @@ Total: 8-10 hours over 4-5 evenings
    - https://www.promptingguide.ai/introduction/basics
    - Focus on: Few-shot prompting, Output formatting
 
-2. **Google ADK Quickstart (15 min)**
-   - https://ai.google.dev/tutorials/python_quickstart
-   - Just the setup and first example
+2. **LiteLLM Quickstart (15 min)**
+   - https://docs.litellm.ai/docs/
+   - Read: "Basic Usage" and "Supported Providers" (skim)
 
 3. **Function Calling Overview (10 min)**
-   - https://ai.google.dev/tutorials/function_calling_python_quickstart
-   - Understand the concept
+   - https://docs.litellm.ai/docs/completion/function_call
+   - Understand the concept — LiteLLM uses OpenAI-style function definitions
+     that work across providers.
 
 **Done reading?** Start Evening 11! 🚀
 
 ---
 
-## 🌙 Evening 11: Google ADK Setup + Agent Architecture
+## 🌙 Evening 11: LiteLLM Setup + Agent Architecture
 
 **⏰ Time:** 1.5-2 hours  
-**Goal:** Setup Google ADK and understand agent architecture
+**Goal:** Verify your LLM access works and design the agent architecture
 
 ### **Timeline:**
 
 ```
 7:30 PM - Start
-├── 7:30-8:00 PM (30 min) - Google ADK setup
-├── 8:00-8:30 PM (30 min) - Test Gemini API
+├── 7:30-8:00 PM (30 min) - LiteLLM smoke test
+├── 8:00-8:30 PM (30 min) - LLM prompting basics
 ├── 8:30-9:00 PM (30 min) - Design agent architecture
 └── 9:00-9:20 PM (20 min) - Create BaseAgent
 9:20 PM - Done!
@@ -76,84 +77,87 @@ Total: 8-10 hours over 4-5 evenings
 
 ---
 
-### **Step 1: Install Google ADK (15 min)**
+### **Step 1: LiteLLM Smoke Test (15 min)**
+
+LiteLLM is already installed (it's in `requirements.txt` from M0). You should
+also have `LITELLM_MODEL` and a provider key set in `.env` — `verify_setup.py`
+in M0 confirmed this works end-to-end.
+
+**Quick sanity check:**
 
 ```bash
-# Install Google Generative AI library
-pip install google-generativeai
-
-# Verify installation
-python -c "import google.generativeai as genai; print('✅ Installed')"
-```
-
-**Configure API key:**
-
-Check your `.env` file has:
-
-```bash
-GOOGLE_API_KEY=your_key_here
+python -c "import litellm; print('✅ LiteLLM installed')"
 ```
 
 **Test connection:**
 
 ```python
-# test_gemini.py
-import google.generativeai as genai
+# test_llm.py
 import os
 from dotenv import load_dotenv
+from litellm import completion
 
 load_dotenv()
 
-# Configure
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+model = os.getenv("LITELLM_MODEL")  # e.g. claude-haiku-4-5-20251001
 
-# Test
-model = genai.GenerativeModel('gemini-pro')
-response = model.generate_content("Say hello!")
+response = completion(
+    model=model,
+    messages=[{"role": "user", "content": "Say hello!"}],
+)
 
-print(response.text)
-print("✅ Google ADK working!")
+print(response.choices[0].message.content)
+print("✅ LiteLLM working!")
 ```
 
 ```bash
-python test_gemini.py
+python test_llm.py
 
 # Should print a greeting!
 ```
 
+**Why LiteLLM?** It normalizes API differences between providers behind a
+single function call. The same code runs against Anthropic, OpenAI, Gemini,
+or any of [100+ providers](https://docs.litellm.ai/docs/providers) — you swap
+providers by changing `LITELLM_MODEL` in `.env`.
+
 ---
 
-### **Step 2: Understand Gemini Basics (15 min)**
+### **Step 2: LLM Prompting Basics (15 min)**
 
 **Try a few examples:**
 
 ```python
-# gemini_examples.py
-import google.generativeai as genai
+# llm_examples.py
 import os
 from dotenv import load_dotenv
+from litellm import completion
 
 load_dotenv()
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+model = os.getenv("LITELLM_MODEL")
 
-model = genai.GenerativeModel('gemini-pro')
+
+def ask(prompt: str) -> str:
+    response = completion(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    return response.choices[0].message.content
+
 
 # Example 1: Simple completion
-response = model.generate_content("Explain async/await in Python in one sentence")
-print("Example 1:", response.text)
+print("Example 1:", ask("Explain async/await in Python in one sentence"))
 
 # Example 2: JSON output
-prompt = """
+print("\nExample 2:", ask("""
 Given this article title: "New AI Model Released"
 Output JSON with these fields: relevant (boolean), reason (string)
 
 {"relevant": true/false, "reason": "explanation"}
-"""
-response = model.generate_content(prompt)
-print("\nExample 2:", response.text)
+"""))
 
 # Example 3: Few-shot learning
-prompt = """
+print("\nExample 3:", ask("""
 Classify articles as AI-related or not.
 
 Examples:
@@ -163,15 +167,13 @@ Title: "Machine Learning in Healthcare" -> AI-related: Yes
 
 Now classify:
 Title: "New JavaScript Framework"
-"""
-response = model.generate_content(prompt)
-print("\nExample 3:", response.text)
+"""))
 ```
 
 ```bash
-python gemini_examples.py
+python llm_examples.py
 
-# See how Gemini responds!
+# See how the model responds!
 ```
 
 ---
@@ -184,120 +186,107 @@ python gemini_examples.py
 
 ```python
 """Base class for AI agents."""
-from abc import ABC, abstractmethod
-from typing import Dict, Any, Optional
-from pathlib import Path
-import google.generativeai as genai
 import os
+from abc import ABC, abstractmethod
+from typing import Any, Dict, Optional
+
+from litellm import completion
 
 
 class BaseAgent(ABC):
     """
     Base class for all AI agents.
-    
+
     Implements Template Method pattern:
     - execute() orchestrates the workflow
     - Subclasses implement specific steps
     """
-    
-    def __init__(self, model_name: str = "gemini-pro"):
+
+    def __init__(self, model: Optional[str] = None):
         """
         Initialize agent.
-        
+
         Args:
-            model_name: Gemini model to use
+            model: LiteLLM model string. Defaults to LITELLM_MODEL from env.
         """
-        self.model_name = model_name
-        self.model = None
-        self._configure_model()
-    
-    def _configure_model(self):
-        """Configure Gemini model."""
-        # Get API key from environment
-        api_key = os.getenv('GOOGLE_API_KEY')
-        if not api_key:
-            raise ValueError("GOOGLE_API_KEY not found in environment")
-        
-        genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel(self.model_name)
-    
+        self.model = model or os.getenv("LITELLM_MODEL")
+        if not self.model:
+            raise ValueError(
+                "No model configured. Set LITELLM_MODEL in .env "
+                "or pass `model=` to the agent constructor."
+            )
+
     async def execute(self, input_path: str, output_path: str) -> Dict[str, Any]:
         """
         Execute agent workflow (Template Method).
-        
+
         Steps:
         1. Load input context
         2. Process with LLM
         3. Save results
-        
+
         Args:
             input_path: Path to input markdown file
             output_path: Path to save output
-            
+
         Returns:
             Result metadata
         """
         print(f"\n🤖 {self.__class__.__name__} starting...")
-        
+
         # Step 1: Load
         context = await self._load_context(input_path)
-        
+
         # Step 2: Process
         result = await self._process(context)
-        
+
         # Step 3: Save
         await self._save_result(result, output_path)
-        
+
         print(f"✅ {self.__class__.__name__} complete")
-        
+
         return {
-            'input_path': input_path,
-            'output_path': output_path,
-            'success': True
+            "input_path": input_path,
+            "output_path": output_path,
+            "success": True,
         }
-    
+
     @abstractmethod
     async def _load_context(self, input_path: str) -> Dict[str, Any]:
-        """
-        Load input context.
-        
-        Subclasses implement how to read their input.
-        """
+        """Load input context. Subclasses implement how to read their input."""
         pass
-    
+
     @abstractmethod
     async def _process(self, context: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Process context with LLM.
-        
-        Subclasses implement their specific logic.
-        """
+        """Process context with LLM. Subclasses implement their specific logic."""
         pass
-    
+
     @abstractmethod
     async def _save_result(self, result: Dict[str, Any], output_path: str):
-        """
-        Save processing result.
-        
-        Subclasses implement how to save their output.
-        """
+        """Save processing result. Subclasses implement how to save their output."""
         pass
-    
-    def _call_llm(self, prompt: str) -> str:
+
+    def _call_llm(self, prompt: str, system: Optional[str] = None) -> str:
         """
-        Call Gemini with prompt.
-        
+        Call the configured LLM via LiteLLM.
+
         Helper method for subclasses.
-        
+
         Args:
-            prompt: Prompt to send
-            
+            prompt: User prompt.
+            system: Optional system prompt.
+
         Returns:
-            LLM response text
+            LLM response text.
         """
+        messages = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": prompt})
+
         try:
-            response = self.model.generate_content(prompt)
-            return response.text
+            response = completion(model=self.model, messages=messages)
+            return response.choices[0].message.content
         except Exception as e:
             print(f"❌ LLM call failed: {e}")
             raise
@@ -330,8 +319,8 @@ asyncio.run(agent.execute("input.md", "output.md"))
 
 ### **Evening 11 Deliverable:**
 
-✅ Google ADK installed and configured  
-✅ Gemini API working  
+✅ LiteLLM smoke test passing  
+✅ Provider key configured and reachable  
 ✅ BaseAgent architecture defined  
 ✅ Template Method pattern implemented  
 ✅ Ready to build real agents  
@@ -709,19 +698,22 @@ def calculator(expression: str) -> Dict[str, Any]:
         }
 
 
-# Tool schema for LLM
+# Tool schema for LLM — OpenAI / LiteLLM format
 CALCULATOR_SCHEMA = {
-    "name": "calculator",
-    "description": "Evaluate mathematical expressions. Use for arithmetic calculations.",
-    "parameters": {
-        "type": "object",
-        "properties": {
-            "expression": {
-                "type": "string",
-                "description": "Mathematical expression to evaluate (e.g., '2 + 2', '10 * 5')"
-            }
-        },
-        "required": ["expression"]
+    "type": "function",
+    "function": {
+        "name": "calculator",
+        "description": "Evaluate mathematical expressions. Use for arithmetic calculations.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "expression": {
+                    "type": "string",
+                    "description": "Mathematical expression to evaluate (e.g., '2 + 2', '10 * 5')"
+                }
+            },
+            "required": ["expression"]
+        }
     }
 }
 
@@ -771,24 +763,27 @@ def web_search(query: str, num_results: int = 3) -> Dict[str, Any]:
     }
 
 
-# Tool schema
+# Tool schema — OpenAI / LiteLLM format
 WEB_SEARCH_SCHEMA = {
-    "name": "web_search",
-    "description": "Search the web for current information. Use when you need real-time data.",
-    "parameters": {
-        "type": "object",
-        "properties": {
-            "query": {
-                "type": "string",
-                "description": "Search query"
+    "type": "function",
+    "function": {
+        "name": "web_search",
+        "description": "Search the web for current information. Use when you need real-time data.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "Search query"
+                },
+                "num_results": {
+                    "type": "integer",
+                    "description": "Number of results to return (1-10)",
+                    "default": 3
+                }
             },
-            "num_results": {
-                "type": "integer",
-                "description": "Number of results to return (1-10)",
-                "default": 3
-            }
-        },
-        "required": ["query"]
+            "required": ["query"]
+        }
     }
 }
 
@@ -802,94 +797,93 @@ if __name__ == "__main__":
 
 ### **Step 2: Add Function Calling to Agent (45 min)**
 
+**LiteLLM normalizes function calling to the OpenAI shape:** you pass a `tools`
+list to `completion()`, and the response includes `tool_calls` when the model
+wants to call one. You execute the function, append the result back into the
+`messages` list as a `role: "tool"` turn, and call `completion()` again until
+the model returns a normal text response.
+
 **Update BaseAgent with tool support:**
 
 ```python
-# In base_agent.py, add:
+# In base_agent.py, add at the top:
+import json
+from typing import Callable, Dict, List, Optional
 
-from google.generativeai.types import FunctionDeclaration, Tool
+from litellm import completion
+
 
 class BaseAgent(ABC):
-    def __init__(self, model_name: str = "gemini-pro", tools: List[Dict] = None):
-        self.model_name = model_name
-        self.tools = tools or []
-        self.model = None
-        self.tool_functions = {}
-        self._configure_model()
-    
-    def _configure_model(self):
-        """Configure Gemini model with tools."""
-        api_key = os.getenv('GOOGLE_API_KEY')
-        if not api_key:
-            raise ValueError("GOOGLE_API_KEY not found")
-        
-        genai.configure(api_key=api_key)
-        
-        # Configure with tools if provided
-        if self.tools:
-            # Create function declarations
-            functions = []
-            for tool_schema in self.tools:
-                func_decl = FunctionDeclaration(
-                    name=tool_schema['name'],
-                    description=tool_schema['description'],
-                    parameters=tool_schema['parameters']
-                )
-                functions.append(func_decl)
-            
-            # Create tools
-            tools = Tool(function_declarations=functions)
-            self.model = genai.GenerativeModel(
-                self.model_name,
-                tools=[tools]
+    def __init__(
+        self,
+        model: Optional[str] = None,
+        tools: Optional[List[Dict]] = None,
+    ):
+        self.model = model or os.getenv("LITELLM_MODEL")
+        if not self.model:
+            raise ValueError(
+                "No model configured. Set LITELLM_MODEL in .env "
+                "or pass `model=` to the agent constructor."
             )
-        else:
-            self.model = genai.GenerativeModel(self.model_name)
-    
-    def register_tool_function(self, name: str, function):
-        """Register actual function for a tool."""
+        self.tools = tools or []
+        self.tool_functions: Dict[str, Callable] = {}
+
+    def register_tool_function(self, name: str, function: Callable) -> None:
+        """Register the actual Python function backing a tool schema."""
         self.tool_functions[name] = function
-    
-    def _call_llm_with_tools(self, prompt: str) -> str:
+
+    def _call_llm_with_tools(self, prompt: str, system: Optional[str] = None) -> str:
         """
-        Call LLM with tool support.
-        
-        Handles function calling loop.
+        Call the LLM with tool support, looping until the model returns text.
+
+        Tool-call protocol:
+          1. Send prompt + tool schemas.
+          2. If response contains tool_calls, execute each tool locally.
+          3. Append the assistant message and each tool result back into messages.
+          4. Call the model again.
+          5. Repeat until the model returns plain text.
         """
-        chat = self.model.start_chat()
-        response = chat.send_message(prompt)
-        
-        # Check for function calls
-        while response.candidates[0].content.parts:
-            part = response.candidates[0].content.parts[0]
-            
-            # If function call
-            if hasattr(part, 'function_call'):
-                func_call = part.function_call
-                func_name = func_call.name
-                func_args = dict(func_call.args)
-                
-                print(f"   🔧 Tool call: {func_name}({func_args})")
-                
-                # Execute function
-                if func_name in self.tool_functions:
-                    result = self.tool_functions[func_name](**func_args)
-                    print(f"   📊 Tool result: {result}")
-                    
-                    # Send result back to LLM
-                    response = chat.send_message(
-                        Part(function_response=FunctionResponse(
-                            name=func_name,
-                            response=result
-                        ))
-                    )
-                else:
-                    raise ValueError(f"Tool {func_name} not registered")
-            else:
-                # Text response, we're done
-                return response.text
-        
-        return response.text
+        messages: List[Dict] = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": prompt})
+
+        # Hard cap on tool-call rounds — protects against infinite loops.
+        for _ in range(10):
+            response = completion(
+                model=self.model,
+                messages=messages,
+                tools=self.tools or None,
+            )
+            msg = response.choices[0].message
+
+            # No tool calls -> we're done.
+            if not getattr(msg, "tool_calls", None):
+                return msg.content
+
+            # Record the assistant turn (must come before tool results).
+            messages.append(msg.model_dump())
+
+            # Execute each tool call and append its result.
+            for tool_call in msg.tool_calls:
+                name = tool_call.function.name
+                args = json.loads(tool_call.function.arguments or "{}")
+                print(f"   🔧 Tool call: {name}({args})")
+
+                if name not in self.tool_functions:
+                    raise ValueError(f"Tool {name!r} not registered")
+
+                result = self.tool_functions[name](**args)
+                print(f"   📊 Tool result: {result}")
+
+                messages.append({
+                    "role": "tool",
+                    "tool_call_id": tool_call.id,
+                    "name": name,
+                    "content": json.dumps(result),
+                })
+
+        raise RuntimeError("Tool-call loop exceeded 10 rounds — model is stuck.")
 ```
 
 ---
@@ -908,19 +902,17 @@ from src.tools.web_search import web_search, WEB_SEARCH_SCHEMA
 class EnhancedFilterAgent(NewsFilterAgent):
     """
     Filter agent that can use tools.
-    
+
     Extends NewsFilterAgent with calculator and search.
     """
-    
+
     def __init__(self):
-        # Initialize with tools
-        super().__init__()
-        self.tools = [CALCULATOR_SCHEMA, WEB_SEARCH_SCHEMA]
-        self._configure_model()  # Reconfigure with tools
-        
-        # Register tool functions
-        self.register_tool_function('calculator', calculator)
-        self.register_tool_function('web_search', web_search)
+        # Pass tools through to BaseAgent so they're sent on every LLM call.
+        super().__init__(tools=[CALCULATOR_SCHEMA, WEB_SEARCH_SCHEMA])
+
+        # Register the actual Python functions backing each tool schema.
+        self.register_tool_function("calculator", calculator)
+        self.register_tool_function("web_search", web_search)
     
     def _judge_relevance(self, article: Dict) -> Dict:
         """
@@ -1200,12 +1192,12 @@ git push origin feature/milestone-3-agent
 
 ## Summary
 
-Built AI agent that filters articles using Gemini LLM with tool calling support.
+Built AI agent that filters articles via LiteLLM with tool calling support.
 
 ## What I Built
 
 ✅ **NewsFilterAgent**
-- Uses Gemini to judge article relevance
+- Uses the configured LLM (default: Claude Haiku 4.5 via LiteLLM) to judge article relevance
 - Filters for AI/ML content
 - Returns relevance scores and reasoning
 
@@ -1221,7 +1213,7 @@ Built AI agent that filters articles using Gemini LLM with tool calling support.
 
 ## Skills Learned
 
-- Google ADK integration
+- LiteLLM integration (provider-agnostic LLM access)
 - Prompt engineering
 - Function calling / tool use
 - LLM error handling
@@ -1262,7 +1254,7 @@ Ready for Milestone 4: MCP-Powered Pipeline
 ### **What You Accomplished:**
 
 ✅ Built first AI agent  
-✅ Integrated Google ADK (Gemini)  
+✅ Integrated LiteLLM (provider-agnostic LLM client)  
 ✅ Engineered effective prompts  
 ✅ Implemented function calling  
 ✅ Created reusable agent architecture  
@@ -1270,8 +1262,8 @@ Ready for Milestone 4: MCP-Powered Pipeline
 
 ### **Skills Gained (15 skills):**
 
-1. Google ADK setup and configuration
-2. Gemini API integration
+1. LiteLLM setup and configuration
+2. Provider-agnostic LLM API integration
 3. Prompt engineering basics
 4. Few-shot learning
 5. JSON output formatting
@@ -1308,7 +1300,7 @@ You'll build MCP servers and create a multi-agent pipeline!
 
 ---
 
-**Questions?** Ask in Slack: `#ai-agent-onboarding-cohort-[X]`
+**Questions?** Ask in Slack: `#ai-upskill-cohort-[X]`
 
 **Milestone 3 Complete** ✅  
 **Time Spent:** 8-10 hours over 4-5 evenings  
