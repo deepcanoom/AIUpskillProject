@@ -1,40 +1,36 @@
-"""Main entry point for news fetcher."""
+# src/main.py
 
 import asyncio
-import sys
-import traceback
 
+from src.fetchers.github_trending_fetcher import GitHubTrendingFetcher
+from src.fetchers.hackernews_fetcher import HackerNewsFetcher
 from src.orchestrator import FetchOrchestrator
+from src.storage.markdown_storage import MarkdownStorage
+from src.transformers.article_transformer import ArticleTransformer
 
 
 async def main():
-    """Main function."""
-    print("=" * 60)
-    print("  AI Agent Onboarding - News Fetcher")
-    print("  Milestone 1: Async News Fetcher")
-    print("=" * 60)
+    """Main entry point with dependency injection."""
 
-    try:
-        # Run orchestrator
-        orchestrator = FetchOrchestrator()
-        articles = await orchestrator.fetch_all()
+    # 1. Crear las dependencias base
+    transformer = ArticleTransformer()
+    storage = MarkdownStorage("data/articles")
 
-        print("\n" + "=" * 60)
-        print(f"✅ Success! Fetched {len(articles)} articles total")
-        print("📁 Saved to: data/articles/all_articles.md")
-        print("=" * 60)
+    # 2. Crear los fetchers inyectándoles el transformador y el almacenamiento
+    fetchers = [
+        ("HackerNews", HackerNewsFetcher(transformer, storage)),
+        ("GitHub Trending", GitHubTrendingFetcher(transformer, storage)),
+    ]
 
-        return 0
+    # 3. Inyectar todo en el orquestador
+    orchestrator = FetchOrchestrator(
+        fetchers=fetchers, storage=storage, transformer=transformer
+    )
 
-    except KeyboardInterrupt:
-        print("\n❌ Interrupted by user")
-        return 1
-    except Exception as e:
-        print(f"\n❌ Error: {e}")
-        traceback.print_exc()
-        return 1
+    # 4. Ejecutar el proceso
+    articles = await orchestrator.fetch_all()
+    print(f"✅ Fetched {len(articles)} articles total")
 
 
 if __name__ == "__main__":
-    exit_code = asyncio.run(main())
-    sys.exit(exit_code)
+    asyncio.run(main())

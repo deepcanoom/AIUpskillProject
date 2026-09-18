@@ -5,9 +5,10 @@ from pathlib import Path
 from typing import List
 
 from src.models.article import Article
+from src.storage.base_storage import ArticleStorage
 
 
-class MarkdownStorage:
+class MarkdownStorage(ArticleStorage):
     """
     Saves articles to markdown files.
 
@@ -72,12 +73,12 @@ if __name__ == "__main__":
         summary="This is a test article.",
     )
 
-    # Save it
-    storage = MarkdownStorage()
+    # Save it using a custom test directory as requested by the workshop
+    storage = MarkdownStorage("data/test_articles")
     path = storage.save([test_article], "test.md")
 
     # Verify
     assert path.exists()
-    print(f"✅ Saved to: {path}")
+    print(f"✅ Saved to {path}")
     print("✅ File contents:")
     print(path.read_text()[:200])
