@@ -7,6 +7,7 @@ from src.models.article import Article
 from src.storage.base_storage import ArticleStorage
 from src.transformers.article_transformer import ArticleTransformer
 
+
 class BaseFetcher(ABC):
     """
     Abstract base class for all news fetchers.
@@ -31,11 +32,11 @@ class BaseFetcher(ABC):
     async def fetch_and_save(self) -> List[Article]:
         """Template method: fetch, save, and return articles."""
         articles = await self.fetch_articles()
-        
+
         if articles:
             source_name = self.get_source_name()
             self.storage.save(articles, f"{source_name}_articles.md")
-            
+
         return articles
 
 

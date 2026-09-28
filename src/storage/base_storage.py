@@ -10,7 +10,7 @@ from src.models.article import Article
 class ArticleStorage(ABC):
     """
     Abstract base class for article storage.
-    
+
     Follows Interface Segregation and Dependency Inversion principles.
     Any storage implementation (Markdown, JSON, Database) must implement this.
     """

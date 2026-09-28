@@ -1,116 +1,338 @@
 # News Articles
 
-**Generated:** 2026-09-14 13:10:34
+**Generated:** 2026-09-28 11:35:07
 
-**Total Articles:** 10
-
----
-
-## iOS 27, iPadOS 27, and macOS 27
-
-**Source:** hackernews
-**URL:** https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/
-**Published:** 2026-09-14 17:50
-**Score:** 54
-
-
+**Total Articles:** 30
 
 ---
 
-## Distributed Systems Classics (2017)
+## The problem is not the AI code, but nobody knows anything anymore
 
 **Source:** hackernews
-**URL:** https://nvartolomei.com/dist-sys-classics/
-**Published:** 2026-09-14 16:02
-**Score:** 95
+**URL:** https://www.ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore/
+**Published:** 2026-09-28 11:11
+**Score:** 62
 
 
 
 ---
 
-## Why don't machine learning research agents overfit?
+## Pirating the Pirates
 
 **Source:** hackernews
-**URL:** https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit
-**Published:** 2026-09-14 16:32
+**URL:** https://mubi.com/en/notebook/posts/pirating-the-pirates
+**Published:** 2026-09-28 10:54
+**Score:** 27
+
+
+
+---
+
+## Parley: Federated, decentralised chat that speaks plain IRC
+
+**Source:** hackernews
+**URL:** https://git.mills.io/prologic/parley
+**Published:** 2026-09-28 05:30
+**Score:** 219
+
+
+
+---
+
+## What Heraldry and Mon Can Teach Us About Building Visual-Identity Generators
+
+**Source:** hackernews
+**URL:** https://benovermyer.com/blog/2026/09/japanese-vs-western-heraldry/
+**Published:** 2026-09-28 09:48
+**Score:** 22
+
+
+
+---
+
+## Hijacking the PS5's RTMP Stream
+
+**Source:** hackernews
+**URL:** https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/
+**Published:** 2026-09-28 10:35
+**Score:** 12
+
+
+
+---
+
+## Kids turned low-traffic NPR Spotify comments into a secret group chat
+
+**Source:** hackernews
+**URL:** https://www.thisamericanlife.org/897/transcript
+**Published:** 2026-09-28 10:35
+**Score:** 55
+
+
+
+---
+
+## Coding Is Not Solved
+
+**Source:** hackernews
+**URL:** https://blog.alexewerlof.com/p/coding-is-not-solved
+**Published:** 2026-09-28 08:52
+**Score:** 252
+
+
+
+---
+
+## 37,500 border drawings: a map of the world as people remember it
+
+**Source:** hackernews
+**URL:** https://www.habibicode.org/thedrawnworld
+**Published:** 2026-09-28 03:35
+**Score:** 123
+
+
+
+---
+
+## Show HN: PaperMono, e-ink fridge magnet shopping list with mobile web page
+
+**Source:** hackernews
+**URL:** https://github.com/seamusc/papermono-shopping-list
+**Published:** 2026-09-28 05:14
+**Score:** 71
+
+Fridge magnet shopping list on an M5Stack PaperMono (ESP32-S3, e-ink
+touchscreen), synced with a phone web app over Wi-Fi. Works offline,
+~2,400 lines of C++.<p>This is a great wee device! BLE, Wi-Fi 
+
+---
+
+## Footguns with Postgres "at time zone 'UTC'"
+
+**Source:** hackernews
+**URL:** https://bookofrevenue.com/blog/6ab81e9a97a13f0001f7e4e1/postgres-at-time-zone-u-does-not-do-what-you-think-it-does
+**Published:** 2026-09-27 05:19
+**Score:** 120
+
+
+
+---
+
+## Show HN: Hntui – A TUI for Hacker News
+
+**Source:** hackernews
+**URL:** https://github.com/ahmd-sh/hntui
+**Published:** 2026-09-28 07:11
+**Score:** 91
+
+hi there! i&#x27;d like you to try out a tui i made for browsing hackernews. it&#x27;s built using opentui and also effect (learning experiment). i really like it and i think you will too!
+
+---
+
+## Owed a billion dollars in Nvidia stock
+
+**Source:** hackernews
+**URL:** https://colo.to/nvidia-stock-narrative.html
+**Published:** 2026-09-27 21:05
+**Score:** 959
+
+
+
+---
+
+## What makes Lisp difficult to read?
+
+**Source:** hackernews
+**URL:** https://paultm.nl/paren-thesis
+**Published:** 2026-09-28 10:12
+**Score:** 3
+
+
+
+---
+
+## What Would a Serious AI Product Look Like?
+
+**Source:** hackernews
+**URL:** https://blog.glyph.im/2026/09/serious-ai-product.html
+**Published:** 2026-09-28 06:02
+**Score:** 23
+
+
+
+---
+
+## Ember-1
+
+**Source:** hackernews
+**URL:** https://fireworks.ai/blog/ember-1
+**Published:** 2026-09-27 12:31
+**Score:** 554
+
+
+
+---
+
+## When did Google get so weird?
+
+**Source:** hackernews
+**URL:** https://sancho.bearblog.dev/google-weird/
+**Published:** 2026-09-27 15:12
+**Score:** 1622
+
+
+
+---
+
+## Nissan's third generation e-POWER powertrain
+
+**Source:** hackernews
+**URL:** https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/E_POWER_GEN3/
+**Published:** 2026-09-27 21:31
+**Score:** 132
+
+
+
+---
+
+## Show HN: Free alternative to graphics design giants
+
+**Source:** hackernews
+**URL:** https://scissor.studio/
+**Published:** 2026-09-28 03:55
 **Score:** 39
 
-
-
----
-
-## Principles for Fast Tokio Applications
-
-**Source:** hackernews
-**URL:** https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/
-**Published:** 2026-09-14 15:27
-**Score:** 68
-
-
+A webassembly web based app that help editing raster and vector on browser without any subscription or signups
 
 ---
 
-## Show HN: Neobrutalism.dev – Just added Base UI support and added new color theme
+## Thinking fast and slow in AI: The role of metacognition (2021)
 
 **Source:** hackernews
-**URL:** https://www.neobrutalism.dev/
-**Published:** 2026-09-14 16:02
-**Score:** 50
+**URL:** https://arxiv.org/abs/2110.01834
+**Published:** 2026-09-27 22:23
+**Score:** 154
 
 
 
 ---
 
-## OpenAI bots knew about the RubyGems caching vulnerability
+## Updated Google Maps shows destruction of the city of Rafah
 
 **Source:** hackernews
-**URL:** https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/
-**Published:** 2026-09-14 12:40
-**Score:** 182
+**URL:** https://twitter.com/AliAbunimah/status/2103890594137309425
+**Published:** 2026-09-28 10:32
+**Score:** 32
 
 
 
 ---
 
-## Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama
+## Self-Hosting on the Dark Web
 
 **Source:** hackernews
-**URL:** https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/
-**Published:** 2026-09-14 13:59
+**URL:** https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/
+**Published:** 2026-09-27 15:03
+**Score:** 309
+
+
+
+---
+
+## Malleable software: Restoring user agency in a world of locked-down apps (2025)
+
+**Source:** hackernews
+**URL:** https://www.inkandswitch.com/essay/malleable-software/
+**Published:** 2026-09-27 14:01
+**Score:** 138
+
+
+
+---
+
+## MongoDB CEO resigns "effective immediately" to join Meta, stock drops 20%
+
+**Source:** hackernews
+**URL:** https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/
+**Published:** 2026-09-28 09:54
 **Score:** 86
 
 
 
 ---
 
-## Cua (YC P25) Is Hiring a Founding Technical GTM Lead
+## Nvidia wants to put a watchdog chip next to every AI agent
 
 **Source:** hackernews
-**URL:** https://www.ycombinator.com/companies/cua/jobs/1IWEKVH-founding-technical-gtm-lead
-**Published:** 2026-09-14 17:00
-**Score:** 1
+**URL:** https://madrobot.blog/2026/09/28/nvidia-open-agent-safety-platform-openshell-sentry-rogue-ai-agents/
+**Published:** 2026-09-28 10:46
+**Score:** 29
 
 
 
 ---
 
-## A Beginning for Mathematics
+## Alan Kay's answer to “Did the ENIAC have a BIOS”?
 
 **Source:** hackernews
-**URL:** https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/
-**Published:** 2026-09-14 15:33
-**Score:** 33
+**URL:** https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11
+**Published:** 2026-09-27 14:37
+**Score:** 171
 
 
 
 ---
 
-## Steam Frame starts at $1059
+## Functional Mechanical Sympathy [video]
 
 **Source:** hackernews
-**URL:** https://store.steampowered.com/hardware/steamframe
-**Published:** 2026-09-14 17:27
-**Score:** 76
+**URL:** https://www.youtube.com/watch?v=jSHmDnUZCm8
+**Published:** 2026-09-25 20:26
+**Score:** 59
+
+
+
+---
+
+## Guitar amp and effects pedal built on the Waveshare ESP32-S3-Touch-AMOLED-2.06
+
+**Source:** hackernews
+**URL:** https://github.com/dashersw/coyopedal
+**Published:** 2026-09-25 21:24
+**Score:** 139
+
+
+
+---
+
+## Lunar Terminator Paradox
+
+**Source:** hackernews
+**URL:** https://notes.secretsauce.net/notes/2026/09/27_lunar-terminator-paradox.html
+**Published:** 2026-09-27 16:06
+**Score:** 96
+
+
+
+---
+
+## Made by Mechanical Means
+
+**Source:** hackernews
+**URL:** https://felixrieseberg.com/made-by-mechanical-means/
+**Published:** 2026-09-28 02:06
+**Score:** 61
+
+
+
+---
+
+## The state of SIMD in Rust in 2026
+
+**Source:** hackernews
+**URL:** https://shnatsel.github.io/state-of-simd-rust-2026/
+**Published:** 2026-09-25 08:46
+**Score:** 193
 
 
 

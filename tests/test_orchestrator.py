@@ -116,9 +116,7 @@ async def test_orchestrator_handles_fetcher_failure():
 
     # Create one failing fetcher
     failing_fetcher = Mock()
-    failing_fetcher.fetch_and_save = AsyncMock(
-        side_effect=Exception("Network error")
-    )
+    failing_fetcher.fetch_and_save = AsyncMock(side_effect=Exception("Network error"))
 
     orchestrator = FetchOrchestrator(
         fetchers=[
@@ -174,11 +172,10 @@ async def test_orchestrator_saves_combined_results():
         transformer=Mock(),
     )
 
-    articles = await orchestrator.fetch_all()
+    await orchestrator.fetch_all()
 
     # Verify storage.save was called with combined articles
     assert mock_storage.save.called
     saved_articles = mock_storage.save.call_args[0][0]
     assert len(saved_articles) == 2
     print("✅ Combined save works!")
-

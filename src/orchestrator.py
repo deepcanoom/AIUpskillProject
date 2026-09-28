@@ -22,7 +22,7 @@ class FetchOrchestrator:
         self,
         fetchers: List[Tuple[str, BaseFetcher]],
         storage: ArticleStorage,
-        transformer: ArticleTransformer
+        transformer: ArticleTransformer,
     ):
         """
         Initialize with injected dependencies.

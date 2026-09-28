@@ -56,4 +56,3 @@ async def test_concurrent_fetching():
     print(f"⚡ Fetched {total} articles in {elapsed:.2f}s")
 
     assert elapsed < 15.0  # Should be fast with concurrent
-
