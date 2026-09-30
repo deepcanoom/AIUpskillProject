@@ -1,244 +1,242 @@
 # News Articles
 
-**Generated:** 2026-09-18 10:46:11
+**Generated:** 2026-09-30 15:49:46
 
 **Total Articles:** 20
 
 ---
 
-## Build Faster Feedback Loops Using Qualitative User Research
+## Gemini 4 Argon
 
 **Source:** rss
-**URL:** https://blog.nseldeib.com/p/build-faster-feedback-loops-using
-**Published:** 2026-09-18 14:58
+**URL:** https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/
+**Published:** 2026-09-30 20:04
 **Score:** 0
 
-<p>Article URL: <a href="https://blog.nseldeib.com/p/build-faster-feedback-loops-using">https://blog.nseldeib.com/p/build-faster-feedback-loops-using</a></p>
-<p>Comments URL: <a href="https://news.yco
+<p>Article URL: <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon
 
 ---
 
-## Show HN: Rickub – The Smartest Git in the Universe
+## Halfspace experimental IDE for solid modeling with distance fields
 
 **Source:** rss
-**URL:** https://rickub.com/
-**Published:** 2026-09-18 14:56
+**URL:** https://www.mattkeeter.com/projects/halfspace/
+**Published:** 2026-09-30 19:44
 **Score:** 0
 
-<p>Article URL: <a href="https://rickub.com/">https://rickub.com/</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49755312">https://news.ycombinator.com/item?id=49755312</a></p>
+<p>Article URL: <a href="https://www.mattkeeter.com/projects/halfspace/">https://www.mattkeeter.com/projects/halfspace/</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49913350"
 
 ---
 
-## North Korean nuclear test sets off years of earthquakes
+## America.gov goes crazy on "play Minecraft"
 
 **Source:** rss
-**URL:** https://www.science.org/content/article/north-korean-nuclear-test-sets-years-earthquakes
-**Published:** 2026-09-18 14:45
+**URL:** https://america.gov/chat
+**Published:** 2026-09-30 19:34
 **Score:** 0
 
-<p><a href="https://archive.is/xjmvA" rel="nofollow">https://archive.is/xjmvA</a></p>
-<hr />
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49755160">https://news.ycombinator.com/item?
+<p>Article URL: <a href="https://america.gov/chat">https://america.gov/chat</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49913255">https://news.ycombinator.com/item?id=499132
 
 ---
 
-## Mathematicians Build Long-Awaited Graph Sandwich
+## EDG C++ front-end goes public
 
 **Source:** rss
-**URL:** https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/
-**Published:** 2026-09-18 14:41
+**URL:** https://edgcpp.org/#transition
+**Published:** 2026-09-30 19:26
 **Score:** 0
 
-<p>Article URL: <a href="https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/">https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-2026
+<p>Article URL: <a href="https://edgcpp.org/#transition">https://edgcpp.org/#transition</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49913192">https://news.ycombinator.com/it
 
 ---
 
-## I Vibed a Proof of Conway's Conjecture
+## Surprisingly Complex Waves Reveal the Brain's Inner Workings
 
 **Source:** rss
-**URL:** https://overreacted.io/how-i-vibed-a-proof-of-conways-conjecture/
-**Published:** 2026-09-18 14:36
+**URL:** https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/
+**Published:** 2026-09-30 19:04
 **Score:** 0
 
-<p>Article URL: <a href="https://overreacted.io/how-i-vibed-a-proof-of-conways-conjecture/">https://overreacted.io/how-i-vibed-a-proof-of-conways-conjecture/</a></p>
+<p>Article URL: <a href="https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/">https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brai
+
+---
+
+## 5x faster Edge Functions: V8 isolates to Firecracker MicroVMs
+
+**Source:** rss
+**URL:** https://www.netlify.com/blog/edge-functions-firecracker-microvms/
+**Published:** 2026-09-30 18:17
+**Score:** 0
+
+<p>Article URL: <a href="https://www.netlify.com/blog/edge-functions-firecracker-microvms/">https://www.netlify.com/blog/edge-functions-firecracker-microvms/</a></p>
 <p>Comments URL: <a href="https://
 
 ---
 
-## BeanShell3 in Development
+## Carnegie Mellon University Announces Historic $3B Gift from Ken Griffin
 
 **Source:** rss
-**URL:** https://beanshell.github.io/home.html
-**Published:** 2026-09-18 14:21
+**URL:** https://www.cmu.edu/news/stories/archives/2026/september/carnegie-mellon-university-announces-historic-3-billion-gift-from-ken-griffin-pioneering-a-new-model
+**Published:** 2026-09-30 18:06
 **Score:** 0
 
-<p>Article URL: <a href="https://beanshell.github.io/home.html">https://beanshell.github.io/home.html</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49754823">https://news.ycom
+<p>Article URL: <a href="https://www.cmu.edu/news/stories/archives/2026/september/carnegie-mellon-university-announces-historic-3-billion-gift-from-ken-griffin-pioneering-a-new-model">https://www.cmu.
 
 ---
 
-## Cloudflare Quick Tunnels
+## Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents
 
 **Source:** rss
-**URL:** https://try.cloudflare.com/
-**Published:** 2026-09-18 14:18
+**URL:** https://github.com/magnitudedev/magnitude
+**Published:** 2026-09-30 17:37
 **Score:** 0
 
-<p>Article URL: <a href="https://try.cloudflare.com/">https://try.cloudflare.com/</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49754785">https://news.ycombinator.com/item?id=
+<p>Hey HN, Anders and Tom here. We're building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any h
 
 ---
 
-## Second Circuit Allows Government to Search Electronic Devices at the Border
+## Claude Says
 
 **Source:** rss
-**URL:** https://knightcolumbia.org/content/second-circuit-allows-government-to-search-electronic-devices-at-the-border-without-any-suspicion
-**Published:** 2026-09-18 14:11
+**URL:** https://ohhfishal.net/Posts/claude
+**Published:** 2026-09-30 17:32
 **Score:** 0
 
-<p>Article URL: <a href="https://knightcolumbia.org/content/second-circuit-allows-government-to-search-electronic-devices-at-the-border-without-any-suspicion">https://knightcolumbia.org/content/second
+<p>Article URL: <a href="https://ohhfishal.net/Posts/claude">https://ohhfishal.net/Posts/claude</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49911928">https://news.ycombinato
 
 ---
 
-## HEIF Heist: image parser RCE exploit
+## Commit description as a thinking tool
 
 **Source:** rss
-**URL:** https://heif-heist.com
-**Published:** 2026-09-18 13:39
+**URL:** https://yedhu.me/posts/commit-description-as-a-thinking-tool/
+**Published:** 2026-09-30 17:18
 **Score:** 0
 
-<p>Article URL: <a href="https://heif-heist.com">https://heif-heist.com</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49754253">https://news.ycombinator.com/item?id=49754253</
+<p>Article URL: <a href="https://yedhu.me/posts/commit-description-as-a-thinking-tool/">https://yedhu.me/posts/commit-description-as-a-thinking-tool/</a></p>
+<p>Comments URL: <a href="https://news.yco
 
 ---
 
-## NATS publishes preliminary report on technical incident of 8 September
+## Bild AI (YC W25) Is Hiring a Founding Product Engineer
 
 **Source:** rss
-**URL:** https://www.nats.aero/news/nats-publishes-preliminary-report-on-technical-incident-of-8-september/
-**Published:** 2026-09-18 13:24
+**URL:** https://www.ycombinator.com/companies/bild-ai/jobs/dAbC3Gd-founding-product-engineer
+**Published:** 2026-09-30 17:00
 **Score:** 0
 
-<p>Article URL: <a href="https://www.nats.aero/news/nats-publishes-preliminary-report-on-technical-incident-of-8-september/">https://www.nats.aero/news/nats-publishes-preliminary-report-on-technical-i
+<p>Article URL: <a href="https://www.ycombinator.com/companies/bild-ai/jobs/dAbC3Gd-founding-product-engineer">https://www.ycombinator.com/companies/bild-ai/jobs/dAbC3Gd-founding-product-engineer</a><
 
 ---
 
-## An Empirical Study of Harness Design for Coding Agents
+## Moist-Electric Wallpaper for Indoor Energy Harvesting and Humidity Management
 
 **Source:** rss
-**URL:** https://arxiv.org/abs/2609.20804
-**Published:** 2026-09-18 13:06
+**URL:** https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.71603
+**Published:** 2026-09-30 15:54
 **Score:** 0
 
-<p>Article URL: <a href="https://arxiv.org/abs/2609.20804">https://arxiv.org/abs/2609.20804</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49753878">https://news.ycombinator.co
+<p>Article URL: <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.71603">https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.71603</a></p>
+<p>Comments URL: <a href="https://news
 
 ---
 
-## I don't like passkeys
+## SDF Public Access Unix System ... est. 1987
 
 **Source:** rss
-**URL:** https://hawksley.dev/blog/i-dont-like-passkeys
-**Published:** 2026-09-18 12:06
+**URL:** https://sdf.org/
+**Published:** 2026-09-30 14:36
 **Score:** 0
 
-<p>Article URL: <a href="https://hawksley.dev/blog/i-dont-like-passkeys">https://hawksley.dev/blog/i-dont-like-passkeys</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49753211"
+<p>Article URL: <a href="https://sdf.org/">https://sdf.org/</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49909610">https://news.ycombinator.com/item?id=49909610</a></p>
+<p>Po
 
 ---
 
-## Bend 2 and the Vibe-Coding Trap
+## A brief history of the Bloomberg terminal
 
 **Source:** rss
-**URL:** https://blog.liampwll.com/posts/bend_vibe_coding/
-**Published:** 2026-09-18 12:03
+**URL:** https://spectrum.ieee.org/bloomberg-terminal
+**Published:** 2026-09-30 14:34
 **Score:** 0
 
-<p>Article URL: <a href="https://blog.liampwll.com/posts/bend_vibe_coding/">https://blog.liampwll.com/posts/bend_vibe_coding/</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=497
+<p>Article URL: <a href="https://spectrum.ieee.org/bloomberg-terminal">https://spectrum.ieee.org/bloomberg-terminal</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49909583">htt
 
 ---
 
-## Cekura (YC F24) Is Hiring
+## What TLA+ can and can't check
 
 **Source:** rss
-**URL:** https://www.ycombinator.com/companies/cekura-ai/jobs/AiWwUxI-forward-deployed-engineer-us
-**Published:** 2026-09-18 12:00
+**URL:** https://buttondown.com/hillelwayne/archive/what-tla-can-and-cant-check/
+**Published:** 2026-09-30 13:57
 **Score:** 0
 
-<p>Article URL: <a href="https://www.ycombinator.com/companies/cekura-ai/jobs/AiWwUxI-forward-deployed-engineer-us">https://www.ycombinator.com/companies/cekura-ai/jobs/AiWwUxI-forward-deployed-engine
+<p>Article URL: <a href="https://buttondown.com/hillelwayne/archive/what-tla-can-and-cant-check/">https://buttondown.com/hillelwayne/archive/what-tla-can-and-cant-check/</a></p>
+<p>Comments URL: <a hr
 
 ---
 
-## Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him
+## SDF vs. MSDF vs. Slug: GPU Text Rendering
 
 **Source:** rss
-**URL:** https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html
-**Published:** 2026-09-18 11:01
+**URL:** https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/
+**Published:** 2026-09-30 13:50
 **Score:** 0
 
-<p>Article URL: <a href="https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html">https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html</a></p>
-
+<p>Article URL: <a href="https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/">https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/</a></p>
+<p>Comments URL: <
 
 ---
 
-## ZCode, the GLM coding agent, silently uploads your Git history
+## The last time my family was replaced by technology
 
 **Source:** rss
-**URL:** https://tokenstead.ai/guides/zcode-silent-git-history-upload
-**Published:** 2026-09-18 10:35
+**URL:** https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/
+**Published:** 2026-09-30 13:06
 **Score:** 0
 
-<p>Article URL: <a href="https://tokenstead.ai/guides/zcode-silent-git-history-upload">https://tokenstead.ai/guides/zcode-silent-git-history-upload</a></p>
-<p>Comments URL: <a href="https://news.ycomb
+<p>Article URL: <a href="https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/">https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/</a
 
 ---
 
-## Microsoft exec called AI scraping 'the largest theft of labor in human history'
+## You said no MCP
 
 **Source:** rss
-**URL:** https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/
-**Published:** 2026-09-18 09:45
+**URL:** https://earendil.com/posts/you-said-no-mcp/
+**Published:** 2026-09-30 09:55
 **Score:** 0
 
-<p>Article URL: <a href="https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/">https://techcrunch.com/2026/09/
+<p>Article URL: <a href="https://earendil.com/posts/you-said-no-mcp/">https://earendil.com/posts/you-said-no-mcp/</a></p>
+<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49906637">https
 
 ---
 
-## OpenJev
+## LinkedIn Larpmaxxing
 
 **Source:** rss
-**URL:** https://openjev.com/
-**Published:** 2026-09-18 09:42
+**URL:** https://hereticpleb.vercel.app/blog/linkedin-larpmaxxing/
+**Published:** 2026-09-30 04:19
 **Score:** 0
 
-<p>Article URL: <a href="https://openjev.com/">https://openjev.com/</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49752041">https://news.ycombinator.com/item?id=49752041</a></
+<p>Article URL: <a href="https://hereticpleb.vercel.app/blog/linkedin-larpmaxxing/">https://hereticpleb.vercel.app/blog/linkedin-larpmaxxing/</a></p>
+<p>Comments URL: <a href="https://news.ycombinator
 
 ---
 
-## Jemalloc 5.4.0
+## Show HN: Ledge.sh – Runnable Markdown Notes
 
 **Source:** rss
-**URL:** https://github.com/jemalloc/jemalloc/releases/tag/5.4.0
-**Published:** 2026-09-18 04:20
+**URL:** https://ledge.sh
+**Published:** 2026-09-29 23:41
 **Score:** 0
 
-<p>Article URL: <a href="https://github.com/jemalloc/jemalloc/releases/tag/5.4.0">https://github.com/jemalloc/jemalloc/releases/tag/5.4.0</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com
-
----
-
-## The scourge of x86 emulation
-
-**Source:** rss
-**URL:** https://fex-emu.com/Scourge-of-emulation/
-**Published:** 2026-09-18 04:09
-**Score:** 0
-
-<p>Article URL: <a href="https://fex-emu.com/Scourge-of-emulation/">https://fex-emu.com/Scourge-of-emulation/</a></p>
-<p>Comments URL: <a href="https://news.ycombinator.com/item?id=49750094">https://n
+<p>Hi HN,<p>Ledge is a Markdown notebook that runs shell commands, code, SQL, etc from inside your own notes.<p>I built Ledge because I spend much of my day copy/pasting commands from my notes into th
 
 ---
 
