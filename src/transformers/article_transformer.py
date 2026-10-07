@@ -1,4 +1,5 @@
 """Transform raw data to Article objects."""
+
 from typing import List, Dict, Any
 from datetime import datetime
 from src.models.article import Article
@@ -24,16 +25,16 @@ class ArticleTransformer:
         articles = []
 
         for item in raw_data:
-            if not item.get('url'):
+            if not item.get("url"):
                 continue
 
             article = Article(
-                title=item.get('title', ''),
-                url=item['url'],
-                published_at=datetime.fromtimestamp(item.get('time', 0)),
-                source='hackernews',
-                summary=item.get('text', '')[:200] if item.get('text') else '',
-                score=item.get('score', 0)
+                title=item.get("title", ""),
+                url=item["url"],
+                published_at=datetime.fromtimestamp(item.get("time", 0)),
+                source="hackernews",
+                summary=item.get("text", "")[:200] if item.get("text") else "",
+                score=item.get("score", 0),
             )
             articles.append(article)
 
@@ -53,11 +54,11 @@ class ArticleTransformer:
 
         for entry in entries:
             article = Article(
-                title=entry.get('title', ''),
-                url=entry.get('link', ''),
-                published_at=self._parse_date(entry.get('published')),
-                source='rss',
-                summary=entry.get('summary', '')[:200]
+                title=entry.get("title", ""),
+                url=entry.get("link", ""),
+                published_at=self._parse_date(entry.get("published")),
+                source="rss",
+                summary=entry.get("summary", "")[:200],
             )
             articles.append(article)
 
@@ -67,6 +68,7 @@ class ArticleTransformer:
         """Parse various date formats."""
         try:
             from dateutil import parser
+
             return parser.parse(date_str)
         except Exception:
             return datetime.now()
@@ -74,8 +76,8 @@ class ArticleTransformer:
 
 if __name__ == "__main__":
     transformer = ArticleTransformer()
-    raw_hn = [{'title': 'Test', 'url': 'http://example.com', 'time': 1234567890}]
+    raw_hn = [{"title": "Test", "url": "http://example.com", "time": 1234567890}]
     articles = transformer.transform_hackernews(raw_hn)
     assert len(articles) == 1
-    assert articles[0].title == 'Test'
+    assert articles[0].title == "Test"
     print("✅ Transformer works!")

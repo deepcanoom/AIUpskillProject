@@ -1,4 +1,5 @@
 """Test polymorphic usage of fetchers."""
+
 import pytest
 from src.transformers.article_transformer import ArticleTransformer
 from src.storage.markdown_storage import MarkdownStorage

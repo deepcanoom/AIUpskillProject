@@ -1,613 +1,428 @@
 # News Articles
 
-**Generated:** 2026-09-16 10:08:41
+**Generated:** 2026-09-28 11:35:07
 
-**Total Articles:** 50
-
----
-
-## PS5 Linux lead quits: "a bunch of noobs using LLMs" that "they don't understand"
-
-**Source:** hackernews
-**URL:** https://frvr.com/blog/news/ps5-linux-lead-quits-as-open-source-projects-have-become-a-bunch-of-noobs-using-llms-that-they-dont-even-understand/
-**Published:** 2026-09-16 14:30
-**Score:** 75
-
-
+**Total Articles:** 38
 
 ---
 
-## A warning about 'model welfare'
+## The problem is not the AI code, but nobody knows anything anymore
 
 **Source:** hackernews
-**URL:** https://mustafa-suleyman.ai/a-warning-about-model-welfare
-**Published:** 2026-09-16 14:27
-**Score:** 53
+**URL:** https://www.ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore/
+**Published:** 2026-09-28 11:11
+**Score:** 62
 
 
 
 ---
 
-## Dream-RSI: Recursive Self-Improvement through Evolving Worlds
+## Pirating the Pirates
 
 **Source:** hackernews
-**URL:** https://arxiv.org/abs/2609.14858
-**Published:** 2026-09-16 13:44
-**Score:** 41
+**URL:** https://mubi.com/en/notebook/posts/pirating-the-pirates
+**Published:** 2026-09-28 10:54
+**Score:** 27
 
 
 
 ---
 
-## The Google Play app review process now regularly takes longer than a week
+## Parley: Federated, decentralised chat that speaks plain IRC
 
 **Source:** hackernews
-**URL:** https://gultsch.social/@daniel/117280438824908947
-**Published:** 2026-09-16 11:19
-**Score:** 209
+**URL:** https://git.mills.io/prologic/parley
+**Published:** 2026-09-28 05:30
+**Score:** 219
 
 
 
 ---
 
-## Mistral X Mozilla: Private, Multilingual AI Browsing
+## What Heraldry and Mon Can Teach Us About Building Visual-Identity Generators
 
 **Source:** hackernews
-**URL:** https://mistral.ai/news/mistral-x-mozilla/
-**Published:** 2026-09-16 08:08
-**Score:** 285
+**URL:** https://benovermyer.com/blog/2026/09/japanese-vs-western-heraldry/
+**Published:** 2026-09-28 09:48
+**Score:** 22
 
 
 
 ---
 
-## Salesforce Global Outage
+## Hijacking the PS5's RTMP Stream
 
 **Source:** hackernews
-**URL:** https://status.salesforce.com/products/all
-**Published:** 2026-09-16 10:37
-**Score:** 173
+**URL:** https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/
+**Published:** 2026-09-28 10:35
+**Score:** 12
 
 
 
 ---
 
-## Introducing System One Models and Jev
+## Kids turned low-traffic NPR Spotify comments into a secret group chat
 
 **Source:** hackernews
-**URL:** https://typesafe.ai/blog/introducing-system-one-models-and-jev
-**Published:** 2026-09-15 19:25
-**Score:** 1619
+**URL:** https://www.thisamericanlife.org/897/transcript
+**Published:** 2026-09-28 10:35
+**Score:** 55
 
 
 
 ---
 
-## DeepSeek v4.1 Flash Is Now Our Best Hacking Model
+## Coding Is Not Solved
 
 **Source:** hackernews
-**URL:** https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model
-**Published:** 2026-09-16 12:19
-**Score:** 30
+**URL:** https://blog.alexewerlof.com/p/coding-is-not-solved
+**Published:** 2026-09-28 08:52
+**Score:** 252
 
 
 
 ---
 
-## ImpactGate: A merge gate that scores the structural decay AI adds
+## 37,500 border drawings: a map of the world as people remember it
 
 **Source:** hackernews
-**URL:** https://github.com/officefloor/ImpactGate
-**Published:** 2026-09-16 13:01
-**Score:** 33
+**URL:** https://www.habibicode.org/thedrawnworld
+**Published:** 2026-09-28 03:35
+**Score:** 123
 
 
 
 ---
 
-## Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations
+## Show HN: PaperMono, e-ink fridge magnet shopping list with mobile web page
 
 **Source:** hackernews
-**URL:** https://github.com/arnegiacomo/fugleramme
-**Published:** 2026-09-15 12:31
-**Score:** 1810
+**URL:** https://github.com/seamusc/papermono-shopping-list
+**Published:** 2026-09-28 05:14
+**Score:** 71
 
-See also: <i>Avian Visitors</i> - <a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48343424">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48343424</a> - May 2026 (20 comments)
+Fridge magnet shopping list on an M5Stack PaperMono (ESP32-S3, e-ink
+touchscreen), synced with a phone web app over Wi-Fi. Works offline,
+~2,400 lines of C++.<p>This is a great wee device! BLE, Wi-Fi 
 
 ---
 
-## Hackers Got Inside a Flock Camera. Its Data Shows How the System Works
+## Footguns with Postgres "at time zone 'UTC'"
 
 **Source:** hackernews
-**URL:** https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/
-**Published:** 2026-09-16 13:18
-**Score:** 146
-
-
-
----
-
-## Kyber (YC W23) Is Hiring a Forward Deployed Engineer
-
-**Source:** hackernews
-**URL:** https://www.ycombinator.com/companies/kyber/jobs/eturrAR-forward-deployed-engineer
-**Published:** 2026-09-16 12:01
-**Score:** 1
+**URL:** https://bookofrevenue.com/blog/6ab81e9a97a13f0001f7e4e1/postgres-at-time-zone-u-does-not-do-what-you-think-it-does
+**Published:** 2026-09-27 05:19
+**Score:** 120
 
 
 
 ---
 
-## Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models
+## Show HN: Hntui – A TUI for Hacker News
 
 **Source:** hackernews
-**URL:** https://stale.jock.pl/
-**Published:** 2026-09-16 13:01
-**Score:** 18
+**URL:** https://github.com/ahmd-sh/hntui
+**Published:** 2026-09-28 07:11
+**Score:** 91
+
+hi there! i&#x27;d like you to try out a tui i made for browsing hackernews. it&#x27;s built using opentui and also effect (learning experiment). i really like it and i think you will too!
+
+---
+
+## Owed a billion dollars in Nvidia stock
+
+**Source:** hackernews
+**URL:** https://colo.to/nvidia-stock-narrative.html
+**Published:** 2026-09-27 21:05
+**Score:** 959
 
 
 
 ---
 
-## Apple Reference Image: A New Approach for Verified Photography
+## What makes Lisp difficult to read?
 
 **Source:** hackernews
-**URL:** https://security.apple.com/blog/apple-reference-image/
-**Published:** 2026-09-16 02:07
-**Score:** 385
+**URL:** https://paultm.nl/paren-thesis
+**Published:** 2026-09-28 10:12
+**Score:** 3
 
 
 
 ---
 
-## Scaling Golang CI by Replacing actions/setup-go
+## What Would a Serious AI Product Look Like?
 
 **Source:** hackernews
-**URL:** https://www.cloudx.ai/posts/setup-go
-**Published:** 2026-09-16 13:02
-**Score:** 31
+**URL:** https://blog.glyph.im/2026/09/serious-ai-product.html
+**Published:** 2026-09-28 06:02
+**Score:** 23
 
 
 
 ---
 
-## How Big Are Factorials?
+## Ember-1
 
 **Source:** hackernews
-**URL:** https://eli.thegreenplace.net/2026/how-big-are-factorials/
-**Published:** 2026-09-15 13:25
-**Score:** 11
+**URL:** https://fireworks.ai/blog/ember-1
+**Published:** 2026-09-27 12:31
+**Score:** 554
 
 
 
 ---
 
-## Original Sony PlayStation 2 security chip 'broken wide open' after 26 years
+## When did Google get so weird?
 
 **Source:** hackernews
-**URL:** https://www.tomshardware.com/video-games/playstation/26-year-old-sony-ps2-security-chip-broken-wide-open-after-four-years-of-effort-reverse-engineering-enthusiast-successfully-unlocks-cxp102064-mechacon-chip
-**Published:** 2026-09-16 11:49
-**Score:** 125
+**URL:** https://sancho.bearblog.dev/google-weird/
+**Published:** 2026-09-27 15:12
+**Score:** 1622
 
 
 
 ---
 
-## Douglas Adams and the exterminated Doctor Who adventure
+## Nissan's third generation e-POWER powertrain
 
 **Source:** hackernews
-**URL:** https://www.bbc.co.uk/news/articles/c8jdp38z4jgo
-**Published:** 2026-09-13 21:49
-**Score:** 46
+**URL:** https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/E_POWER_GEN3/
+**Published:** 2026-09-27 21:31
+**Score:** 132
 
 
 
 ---
 
-## An update on Wayback Machine access
+## Show HN: Free alternative to graphics design giants
 
 **Source:** hackernews
-**URL:** https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/
-**Published:** 2026-09-15 17:52
-**Score:** 623
+**URL:** https://scissor.studio/
+**Published:** 2026-09-28 03:55
+**Score:** 39
 
-
+A webassembly web based app that help editing raster and vector on browser without any subscription or signups
 
 ---
 
-## Doing Everyone Else's Job
+## Thinking fast and slow in AI: The role of metacognition (2021)
 
 **Source:** hackernews
-**URL:** https://yosefk.com/blog/doing-everyone-elses-job.html
-**Published:** 2026-09-15 00:01
+**URL:** https://arxiv.org/abs/2110.01834
+**Published:** 2026-09-27 22:23
 **Score:** 154
 
 
 
 ---
 
-## Show HN: I made a flight simulator, except you're just a passenger
+## Updated Google Maps shows destruction of the city of Rafah
 
 **Source:** hackernews
-**URL:** https://inflightsimulator.com
-**Published:** 2026-09-14 09:08
-**Score:** 302
+**URL:** https://twitter.com/AliAbunimah/status/2103890594137309425
+**Published:** 2026-09-28 10:32
+**Score:** 32
 
-Buckle your seatbelt, secure your tray table, and open your window shade. Now you can simulate flying anywhere in the world as a commercial passenger, from takeoff to touchdown. Terrain, weather, and 
+
 
 ---
 
-## Gemini 3.8 Live and 3.8 Live Extended Thinking
+## Self-Hosting on the Dark Web
 
 **Source:** hackernews
-**URL:** https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/
-**Published:** 2026-09-15 17:38
-**Score:** 460
+**URL:** https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/
+**Published:** 2026-09-27 15:03
+**Score:** 309
 
 
 
 ---
 
-## Intelligence per Watt: Measuring Intelligence Efficiency of Local AI
+## Malleable software: Restoring user agency in a world of locked-down apps (2025)
 
 **Source:** hackernews
-**URL:** https://arxiv.org/abs/2511.07885
-**Published:** 2026-09-14 09:16
-**Score:** 105
+**URL:** https://www.inkandswitch.com/essay/malleable-software/
+**Published:** 2026-09-27 14:01
+**Score:** 138
 
 
 
 ---
 
-## Learning Programming in an Age of LLMs
+## MongoDB CEO resigns "effective immediately" to join Meta, stock drops 20%
 
 **Source:** hackernews
-**URL:** https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/
-**Published:** 2026-09-16 09:12
-**Score:** 151
+**URL:** https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/
+**Published:** 2026-09-28 09:54
+**Score:** 86
 
 
 
 ---
 
-## Why I'm still bearish on LLMs after Navier-Stokes
+## Nvidia wants to put a watchdog chip next to every AI agent
 
 **Source:** hackernews
-**URL:** https://dank.systems/posts/2026-09-15-ai-bear.html
-**Published:** 2026-09-15 17:37
-**Score:** 334
+**URL:** https://madrobot.blog/2026/09/28/nvidia-open-agent-safety-platform-openshell-sentry-rogue-ai-agents/
+**Published:** 2026-09-28 10:46
+**Score:** 29
 
 
 
 ---
 
-## Microsoft says AI rival Anthropic could have 'disastrous impact' on humanity
+## Alan Kay's answer to “Did the ENIAC have a BIOS”?
 
 **Source:** hackernews
-**URL:** https://www.bbc.co.uk/news/articles/c6n07ypqz8kzo
-**Published:** 2026-09-16 14:32
-**Score:** 10
+**URL:** https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11
+**Published:** 2026-09-27 14:37
+**Score:** 171
 
 
 
 ---
 
-## We do modern frequentist statistics: Using fake-data simulation
+## Functional Mechanical Sympathy [video]
 
 **Source:** hackernews
-**URL:** https://statmodeling.stat.columbia.edu/2026/09/14/this-is-modern-frequentist-statistics-using-fake-data-simulation-to-understand/
-**Published:** 2026-09-14 13:58
-**Score:** 49
+**URL:** https://www.youtube.com/watch?v=jSHmDnUZCm8
+**Published:** 2026-09-25 20:26
+**Score:** 59
 
 
 
 ---
 
-## German Rheinmetall open-sources its Battlesuite connected weapon system protcol
+## Guitar amp and effects pedal built on the Waveshare ESP32-S3-Touch-AMOLED-2.06
 
 **Source:** hackernews
-**URL:** https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html
-**Published:** 2026-09-15 21:07
-**Score:** 255
+**URL:** https://github.com/dashersw/coyopedal
+**Published:** 2026-09-25 21:24
+**Score:** 139
 
 
 
 ---
 
-## A software thing I built: GPS on a 25MHz 486-SX
+## Lunar Terminator Paradox
 
 **Source:** hackernews
-**URL:** https://forum.vcfed.org/index.php?threads/a-software-thing-i-built-gps-on-a-25mhz-486-sx.1258966/
-**Published:** 2026-09-16 05:43
-**Score:** 53
+**URL:** https://notes.secretsauce.net/notes/2026/09/27_lunar-terminator-paradox.html
+**Published:** 2026-09-27 16:06
+**Score:** 96
 
 
 
 ---
 
-## Recreating Voodoo Graphics and a Late-1990s Gaming PC on an FPGA
+## Made by Mechanical Means
 
 **Source:** hackernews
-**URL:** https://nand2mario.github.io/posts/2026/zsst-voodoo/
-**Published:** 2026-09-15 22:50
-**Score:** 164
+**URL:** https://felixrieseberg.com/made-by-mechanical-means/
+**Published:** 2026-09-28 02:06
+**Score:** 61
 
 
 
 ---
 
-## PS5 Linux lead quits: "a bunch of noobs using LLMs" that "they don't understand"
+## The state of SIMD in Rust in 2026
 
-**Source:** rss
-**URL:** https://frvr.com/blog/news/ps5-linux-lead-quits-as-open-source-projects-have-become-a-bunch-of-noobs-using-llms-that-they-dont-even-understand/
-**Published:** 2026-09-16 14:30
-**Score:** 0
+**Source:** hackernews
+**URL:** https://shnatsel.github.io/state-of-simd-rust-2026/
+**Published:** 2026-09-25 08:46
+**Score:** 193
 
-Article URL: https://frvr.com/blog/news/ps5-linux-lead-quits-as-open-source-projects-have-become-a-bunch-of-noobs-using-llms-that-they-dont-even-understand/
-Comments URL: https://news.ycombinator.com/
 
----
-
-## A warning about 'model welfare'
-
-**Source:** rss
-**URL:** https://mustafa-suleyman.ai/a-warning-about-model-welfare
-**Published:** 2026-09-16 14:27
-**Score:** 0
-
-Article URL: https://mustafa-suleyman.ai/a-warning-about-model-welfare
-Comments URL: https://news.ycombinator.com/item?id=49727580
-Points: 45
-# Comments: 36
 
 ---
 
-## We know what a world without work looks like
+## debpalash/VoiceStudio
 
-**Source:** rss
-**URL:** https://asteriskmag.substack.com/p/we-already-know-what-a-world-without
-**Published:** 2026-09-16 14:20
+**Source:** github_trending
+**URL:** https://github.com/debpalash/VoiceStudio
+**Published:** 2026-09-28 11:35
 **Score:** 0
 
-Article URL: https://asteriskmag.substack.com/p/we-already-know-what-a-world-without
-Comments URL: https://news.ycombinator.com/item?id=49727463
-Points: 10
-# Comments: 0
+VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages. (⭐ 3,274 stars today)
 
 ---
 
-## Dream-RSI: Recursive Self-Improvement through Evolving Worlds
+## paperclipai/paperclip
 
-**Source:** rss
-**URL:** https://arxiv.org/abs/2609.14858
-**Published:** 2026-09-16 13:44
+**Source:** github_trending
+**URL:** https://github.com/paperclipai/paperclip
+**Published:** 2026-09-28 11:35
 **Score:** 0
 
-Article URL: https://arxiv.org/abs/2609.14858
-Comments URL: https://news.ycombinator.com/item?id=49726955
-Points: 39
-# Comments: 9
+The open-source app everyone uses to manage agents at work (⭐ 3,185 stars today)
 
 ---
 
-## Hackers Got Inside a Flock Camera. Its Data Shows How the System Works
+## vectorize-io/hindsight
 
-**Source:** rss
-**URL:** https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/
-**Published:** 2026-09-16 13:18
+**Source:** github_trending
+**URL:** https://github.com/vectorize-io/hindsight
+**Published:** 2026-09-28 11:35
 **Score:** 0
 
-Article URL: https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/
-Comments URL: https://news.ycombinator.com/item?id=49726586
-Points: 142
-# Comments: 61
+Hindsight: Agent Memory That Learns (⭐ 4,413 stars today)
 
 ---
 
-## Scaling Golang CI by Replacing actions/setup-go
+## NawfalMotii79/PLFM_RADAR
 
-**Source:** rss
-**URL:** https://www.cloudx.ai/posts/setup-go
-**Published:** 2026-09-16 13:02
+**Source:** github_trending
+**URL:** https://github.com/NawfalMotii79/PLFM_RADAR
+**Published:** 2026-09-28 11:35
 **Score:** 0
 
-Article URL: https://www.cloudx.ai/posts/setup-go
-Comments URL: https://news.ycombinator.com/item?id=49726350
-Points: 31
-# Comments: 1
+Open-source, low-cost 10.5 GHz PLFM phased array RADAR system (⭐ 145 stars today)
 
 ---
 
-## Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models
+## cs341-illinois/coursebook
 
-**Source:** rss
-**URL:** https://stale.jock.pl/
-**Published:** 2026-09-16 13:01
+**Source:** github_trending
+**URL:** https://github.com/cs341-illinois/coursebook
+**Published:** 2026-09-28 11:35
 **Score:** 0
 
-Article URL: https://stale.jock.pl/
-Comments URL: https://news.ycombinator.com/item?id=49726343
-Points: 18
-# Comments: 14
+Open Source Introductory Systems Programming Textbook for the University of Illinois (⭐ 265 stars today)
 
 ---
 
-## ImpactGate: A merge gate that scores the structural decay AI adds
+## byoungd/up
 
-**Source:** rss
-**URL:** https://github.com/officefloor/ImpactGate
-**Published:** 2026-09-16 13:01
+**Source:** github_trending
+**URL:** https://github.com/byoungd/up
+**Published:** 2026-09-28 11:35
 **Score:** 0
 
-Article URL: https://github.com/officefloor/ImpactGate
-Comments URL: https://news.ycombinator.com/item?id=49726329
-Points: 33
-# Comments: 34
+An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语 (⭐ 310 stars today)
 
 ---
 
-## DeepSeek v4.1 Flash Is Now Our Best Hacking Model
+## mvschwarz/openrig
 
-**Source:** rss
-**URL:** https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model
-**Published:** 2026-09-16 12:19
+**Source:** github_trending
+**URL:** https://github.com/mvschwarz/openrig
+**Published:** 2026-09-28 11:35
 **Score:** 0
 
-Article URL: https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model
-Comments URL: https://news.ycombinator.com/item?id=49725800
-Points: 28
-# Comments: 1
+Multi-agent harness that runs Claude Code and Codex together as one system (⭐ 781 stars today)
 
 ---
 
-## Kyber (YC W23) Is Hiring a Forward Deployed Engineer
+## dream-num/univer
 
-**Source:** rss
-**URL:** https://www.ycombinator.com/companies/kyber/jobs/eturrAR-forward-deployed-engineer
-**Published:** 2026-09-16 12:01
+**Source:** github_trending
+**URL:** https://github.com/dream-num/univer
+**Published:** 2026-09-28 11:35
 **Score:** 0
 
-Article URL: https://www.ycombinator.com/companies/kyber/jobs/eturrAR-forward-deployed-engineer
-Comments URL: https://news.ycombinator.com/item?id=49725541
-Points: 0
-# Comments: 0
-
----
-
-## Original Sony PlayStation 2 security chip 'broken wide open' after 26 years
-
-**Source:** rss
-**URL:** https://www.tomshardware.com/video-games/playstation/26-year-old-sony-ps2-security-chip-broken-wide-open-after-four-years-of-effort-reverse-engineering-enthusiast-successfully-unlocks-cxp102064-mechacon-chip
-**Published:** 2026-09-16 11:49
-**Score:** 0
-
-Article URL: https://www.tomshardware.com/video-games/playstation/26-year-old-sony-ps2-security-chip-broken-wide-open-after-four-years-of-effort-reverse-engineering-enthusiast-successfully-unlocks-cxp
-
----
-
-## The Google Play app review process now regularly takes longer than a week
-
-**Source:** rss
-**URL:** https://gultsch.social/@daniel/117280438824908947
-**Published:** 2026-09-16 11:19
-**Score:** 0
-
-Article URL: https://gultsch.social/@daniel/117280438824908947
-Comments URL: https://news.ycombinator.com/item?id=49724927
-Points: 206
-# Comments: 179
-
----
-
-## Salesforce Global Outage
-
-**Source:** rss
-**URL:** https://status.salesforce.com/products/all
-**Published:** 2026-09-16 10:37
-**Score:** 0
-
-Article URL: https://status.salesforce.com/products/all
-Comments URL: https://news.ycombinator.com/item?id=49724488
-Points: 170
-# Comments: 93
-
----
-
-## Learning Programming in an Age of LLMs
-
-**Source:** rss
-**URL:** https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/
-**Published:** 2026-09-16 09:12
-**Score:** 0
-
-Article URL: https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/
-Comments URL: https://news.ycombinator.com/item?id=49723873
-Points: 151
-# Comments: 95
-
----
-
-## Mistral X Mozilla: Private, Multilingual AI Browsing
-
-**Source:** rss
-**URL:** https://mistral.ai/news/mistral-x-mozilla/
-**Published:** 2026-09-16 08:08
-**Score:** 0
-
-Article URL: https://mistral.ai/news/mistral-x-mozilla/
-Comments URL: https://news.ycombinator.com/item?id=49723408
-Points: 283
-# Comments: 85
-
----
-
-## A software thing I built: GPS on a 25MHz 486-SX
-
-**Source:** rss
-**URL:** https://forum.vcfed.org/index.php?threads/a-software-thing-i-built-gps-on-a-25mhz-486-sx.1258966/
-**Published:** 2026-09-16 05:43
-**Score:** 0
-
-Article URL: https://forum.vcfed.org/index.php?threads/a-software-thing-i-built-gps-on-a-25mhz-486-sx.1258966/
-Comments URL: https://news.ycombinator.com/item?id=49722521
-Points: 53
-# Comments: 18
-
----
-
-## Apple Reference Image: A New Approach for Verified Photography
-
-**Source:** rss
-**URL:** https://security.apple.com/blog/apple-reference-image/
-**Published:** 2026-09-16 02:07
-**Score:** 0
-
-Article URL: https://security.apple.com/blog/apple-reference-image/
-Comments URL: https://news.ycombinator.com/item?id=49721322
-Points: 384
-# Comments: 251
-
----
-
-## Recreating Voodoo Graphics and a Late-1990s Gaming PC on an FPGA
-
-**Source:** rss
-**URL:** https://nand2mario.github.io/posts/2026/zsst-voodoo/
-**Published:** 2026-09-15 22:50
-**Score:** 0
-
-Article URL: https://nand2mario.github.io/posts/2026/zsst-voodoo/
-Comments URL: https://news.ycombinator.com/item?id=49719938
-Points: 164
-# Comments: 48
-
----
-
-## German Rheinmetall open-sources its Battlesuite connected weapon system protcol
-
-**Source:** rss
-**URL:** https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html
-**Published:** 2026-09-15 21:07
-**Score:** 0
-
-Article URL: https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html
-Comments URL: https://news.ycombinator.com/item?id=49718928
-Points: 255
-# Comments: 96
-
----
-
-## Introducing System One Models and Jev
-
-**Source:** rss
-**URL:** https://typesafe.ai/blog/introducing-system-one-models-and-jev
-**Published:** 2026-09-15 19:25
-**Score:** 0
-
-Article URL: https://typesafe.ai/blog/introducing-system-one-models-and-jev
-Comments URL: https://news.ycombinator.com/item?id=49717558
-Points: 1618
-# Comments: 450
+The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime. (⭐ 1,105 stars today)
 
 ---
 

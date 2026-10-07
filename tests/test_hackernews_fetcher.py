@@ -50,4 +50,3 @@ async def test_fetch_concurrent():
     assert len(articles) > 0
 
     print(f"⚡ Fetched {len(articles)} articles in {elapsed:.2f}s")
-

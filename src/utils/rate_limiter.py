@@ -1,7 +1,6 @@
 """Simple rate limiting."""
 
 import asyncio
-from typing import Optional
 
 
 class RateLimiter:
@@ -62,11 +61,11 @@ async def test_rate_limiter():
     start = time.time()
 
     # Run 4 tasks - should take ~1 second (2 at a time)
-    results = await asyncio.gather(*[slow_task(i) for i in range(4)])
+    await asyncio.gather(*[slow_task(i) for i in range(4)])
 
     elapsed = time.time() - start
     print(f"\n✅ Completed in {elapsed:.2f}s")
-    print(f"   (Should be ~1.0s with 2 concurrent)")
+    print("   (Should be ~1.0s with 2 concurrent)")
 
 
 if __name__ == "__main__":

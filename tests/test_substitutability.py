@@ -1,4 +1,5 @@
 """Test Liskov Substitution Principle."""
+
 import pytest
 from src.fetchers.hackernews_fetcher import HackerNewsFetcher
 from src.fetchers.rss_fetcher import RSSFetcher
@@ -21,15 +22,15 @@ async def test_all_fetchers_substitutable():
     fetchers = [
         HackerNewsFetcher(transformer, storage),
         RSSFetcher("https://hnrss.org/frontpage", transformer, storage),
-        GitHubTrendingFetcher(transformer, storage)
+        GitHubTrendingFetcher(transformer, storage),
     ]
 
     # Each fetcher should work identically
     for fetcher in fetchers:
         # Should have same interface
-        assert hasattr(fetcher, 'fetch_articles')
-        assert hasattr(fetcher, 'get_source_name')
-        assert hasattr(fetcher, 'fetch_and_save')
+        assert hasattr(fetcher, "fetch_articles")
+        assert hasattr(fetcher, "get_source_name")
+        assert hasattr(fetcher, "fetch_and_save")
 
         # Should return List[Article]
         articles = await fetcher.fetch_articles()
@@ -38,9 +39,9 @@ async def test_all_fetchers_substitutable():
         # All articles should have same structure
         if articles:
             article = articles[0]
-            assert hasattr(article, 'title')
-            assert hasattr(article, 'url')
-            assert hasattr(article, 'source')
+            assert hasattr(article, "title")
+            assert hasattr(article, "url")
+            assert hasattr(article, "source")
 
         # Should have source name
         source = fetcher.get_source_name()

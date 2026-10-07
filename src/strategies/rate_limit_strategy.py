@@ -1,7 +1,8 @@
 """Rate limiting strategies."""
+
 from abc import ABC, abstractmethod
 import asyncio
-from datetime import datetime, timedelta
+from datetime import datetime
 
 
 class RateLimitStrategy(ABC):
@@ -73,4 +74,3 @@ class TokenBucketStrategy(RateLimitStrategy):
 
     def release(self):
         pass  # Not needed for token bucket
-    

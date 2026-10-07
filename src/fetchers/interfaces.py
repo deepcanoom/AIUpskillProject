@@ -1,6 +1,9 @@
 # src/fetchers/interfaces.py
 
 from abc import ABC, abstractmethod
+from typing import List
+
+from src.models.article import Article
 
 
 class AuthenticatedFetcher(ABC):
