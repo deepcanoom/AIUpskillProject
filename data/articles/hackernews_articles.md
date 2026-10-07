@@ -1,338 +1,336 @@
 # News Articles
 
-**Generated:** 2026-09-28 11:35:07
+**Generated:** 2026-09-30 15:49:49
 
 **Total Articles:** 30
 
 ---
 
-## The problem is not the AI code, but nobody knows anything anymore
+## Gemini 4 Argon
 
 **Source:** hackernews
-**URL:** https://www.ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore/
-**Published:** 2026-09-28 11:11
-**Score:** 62
+**URL:** https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/
+**Published:** 2026-09-30 15:04
+**Score:** 381
 
 
 
 ---
 
-## Pirating the Pirates
+## EDG C++ front-end goes public
 
 **Source:** hackernews
-**URL:** https://mubi.com/en/notebook/posts/pirating-the-pirates
-**Published:** 2026-09-28 10:54
-**Score:** 27
+**URL:** https://edgcpp.org/#transition
+**Published:** 2026-09-30 14:26
+**Score:** 60
 
 
 
 ---
 
-## Parley: Federated, decentralised chat that speaks plain IRC
+## Surprisingly Complex Waves Reveal the Brain's Inner Workings
 
 **Source:** hackernews
-**URL:** https://git.mills.io/prologic/parley
-**Published:** 2026-09-28 05:30
-**Score:** 219
+**URL:** https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/
+**Published:** 2026-09-30 14:04
+**Score:** 50
 
 
 
 ---
 
-## What Heraldry and Mon Can Teach Us About Building Visual-Identity Generators
+## Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents
 
 **Source:** hackernews
-**URL:** https://benovermyer.com/blog/2026/09/japanese-vs-western-heraldry/
-**Published:** 2026-09-28 09:48
-**Score:** 22
+**URL:** https://github.com/magnitudedev/magnitude
+**Published:** 2026-09-30 12:37
+**Score:** 89
+
+Hey HN, Anders and Tom here. We&#x27;re building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any
+
+---
+
+## 5x faster Edge Functions: V8 isolates to Firecracker MicroVMs
+
+**Source:** hackernews
+**URL:** https://www.netlify.com/blog/edge-functions-firecracker-microvms/
+**Published:** 2026-09-30 13:17
+**Score:** 53
 
 
 
 ---
 
-## Hijacking the PS5's RTMP Stream
+## A brief history of the Bloomberg terminal
 
 **Source:** hackernews
-**URL:** https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/
-**Published:** 2026-09-28 10:35
-**Score:** 12
+**URL:** https://spectrum.ieee.org/bloomberg-terminal
+**Published:** 2026-09-30 09:34
+**Score:** 174
 
 
 
 ---
 
-## Kids turned low-traffic NPR Spotify comments into a secret group chat
+## Halfspace experimental IDE for solid modeling with distance fields
 
 **Source:** hackernews
-**URL:** https://www.thisamericanlife.org/897/transcript
-**Published:** 2026-09-28 10:35
-**Score:** 55
+**URL:** https://www.mattkeeter.com/projects/halfspace/
+**Published:** 2026-09-30 14:44
+**Score:** 19
 
 
 
 ---
 
-## Coding Is Not Solved
+## You said no MCP
 
 **Source:** hackernews
-**URL:** https://blog.alexewerlof.com/p/coding-is-not-solved
-**Published:** 2026-09-28 08:52
-**Score:** 252
+**URL:** https://earendil.com/posts/you-said-no-mcp/
+**Published:** 2026-09-30 04:55
+**Score:** 545
 
 
 
 ---
 
-## 37,500 border drawings: a map of the world as people remember it
+## I Could've Accessed 17T Microsoft Records
 
 **Source:** hackernews
-**URL:** https://www.habibicode.org/thedrawnworld
-**Published:** 2026-09-28 03:35
-**Score:** 123
+**URL:** https://blog.faav.net/how-i-couldve-accessed-17-trillion-microsoft-records
+**Published:** 2026-09-28 15:32
+**Score:** 201
 
 
 
 ---
 
-## Show HN: PaperMono, e-ink fridge magnet shopping list with mobile web page
+## Claude Says
 
 **Source:** hackernews
-**URL:** https://github.com/seamusc/papermono-shopping-list
-**Published:** 2026-09-28 05:14
-**Score:** 71
-
-Fridge magnet shopping list on an M5Stack PaperMono (ESP32-S3, e-ink
-touchscreen), synced with a phone web app over Wi-Fi. Works offline,
-~2,400 lines of C++.<p>This is a great wee device! BLE, Wi-Fi 
-
----
-
-## Footguns with Postgres "at time zone 'UTC'"
-
-**Source:** hackernews
-**URL:** https://bookofrevenue.com/blog/6ab81e9a97a13f0001f7e4e1/postgres-at-time-zone-u-does-not-do-what-you-think-it-does
-**Published:** 2026-09-27 05:19
-**Score:** 120
+**URL:** https://ohhfishal.net/Posts/claude
+**Published:** 2026-09-30 12:32
+**Score:** 46
 
 
 
 ---
 
-## Show HN: Hntui – A TUI for Hacker News
+## Commit description as a thinking tool
 
 **Source:** hackernews
-**URL:** https://github.com/ahmd-sh/hntui
-**Published:** 2026-09-28 07:11
-**Score:** 91
-
-hi there! i&#x27;d like you to try out a tui i made for browsing hackernews. it&#x27;s built using opentui and also effect (learning experiment). i really like it and i think you will too!
-
----
-
-## Owed a billion dollars in Nvidia stock
-
-**Source:** hackernews
-**URL:** https://colo.to/nvidia-stock-narrative.html
-**Published:** 2026-09-27 21:05
-**Score:** 959
+**URL:** https://yedhu.me/posts/commit-description-as-a-thinking-tool/
+**Published:** 2026-09-30 12:18
+**Score:** 88
 
 
 
 ---
 
-## What makes Lisp difficult to read?
+## The last time my family was replaced by technology
 
 **Source:** hackernews
-**URL:** https://paultm.nl/paren-thesis
-**Published:** 2026-09-28 10:12
-**Score:** 3
+**URL:** https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/
+**Published:** 2026-09-30 08:06
+**Score:** 137
 
 
 
 ---
 
-## What Would a Serious AI Product Look Like?
+## What TLA+ can and can't check
 
 **Source:** hackernews
-**URL:** https://blog.glyph.im/2026/09/serious-ai-product.html
-**Published:** 2026-09-28 06:02
-**Score:** 23
-
-
-
----
-
-## Ember-1
-
-**Source:** hackernews
-**URL:** https://fireworks.ai/blog/ember-1
-**Published:** 2026-09-27 12:31
-**Score:** 554
-
-
-
----
-
-## When did Google get so weird?
-
-**Source:** hackernews
-**URL:** https://sancho.bearblog.dev/google-weird/
-**Published:** 2026-09-27 15:12
-**Score:** 1622
-
-
-
----
-
-## Nissan's third generation e-POWER powertrain
-
-**Source:** hackernews
-**URL:** https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/E_POWER_GEN3/
-**Published:** 2026-09-27 21:31
-**Score:** 132
-
-
-
----
-
-## Show HN: Free alternative to graphics design giants
-
-**Source:** hackernews
-**URL:** https://scissor.studio/
-**Published:** 2026-09-28 03:55
-**Score:** 39
-
-A webassembly web based app that help editing raster and vector on browser without any subscription or signups
-
----
-
-## Thinking fast and slow in AI: The role of metacognition (2021)
-
-**Source:** hackernews
-**URL:** https://arxiv.org/abs/2110.01834
-**Published:** 2026-09-27 22:23
-**Score:** 154
-
-
-
----
-
-## Updated Google Maps shows destruction of the city of Rafah
-
-**Source:** hackernews
-**URL:** https://twitter.com/AliAbunimah/status/2103890594137309425
-**Published:** 2026-09-28 10:32
-**Score:** 32
-
-
-
----
-
-## Self-Hosting on the Dark Web
-
-**Source:** hackernews
-**URL:** https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/
-**Published:** 2026-09-27 15:03
-**Score:** 309
-
-
-
----
-
-## Malleable software: Restoring user agency in a world of locked-down apps (2025)
-
-**Source:** hackernews
-**URL:** https://www.inkandswitch.com/essay/malleable-software/
-**Published:** 2026-09-27 14:01
-**Score:** 138
-
-
-
----
-
-## MongoDB CEO resigns "effective immediately" to join Meta, stock drops 20%
-
-**Source:** hackernews
-**URL:** https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/
-**Published:** 2026-09-28 09:54
-**Score:** 86
-
-
-
----
-
-## Nvidia wants to put a watchdog chip next to every AI agent
-
-**Source:** hackernews
-**URL:** https://madrobot.blog/2026/09/28/nvidia-open-agent-safety-platform-openshell-sentry-rogue-ai-agents/
-**Published:** 2026-09-28 10:46
-**Score:** 29
-
-
-
----
-
-## Alan Kay's answer to “Did the ENIAC have a BIOS”?
-
-**Source:** hackernews
-**URL:** https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11
-**Published:** 2026-09-27 14:37
-**Score:** 171
-
-
-
----
-
-## Functional Mechanical Sympathy [video]
-
-**Source:** hackernews
-**URL:** https://www.youtube.com/watch?v=jSHmDnUZCm8
-**Published:** 2026-09-25 20:26
-**Score:** 59
-
-
-
----
-
-## Guitar amp and effects pedal built on the Waveshare ESP32-S3-Touch-AMOLED-2.06
-
-**Source:** hackernews
-**URL:** https://github.com/dashersw/coyopedal
-**Published:** 2026-09-25 21:24
-**Score:** 139
-
-
-
----
-
-## Lunar Terminator Paradox
-
-**Source:** hackernews
-**URL:** https://notes.secretsauce.net/notes/2026/09/27_lunar-terminator-paradox.html
-**Published:** 2026-09-27 16:06
+**URL:** https://buttondown.com/hillelwayne/archive/what-tla-can-and-cant-check/
+**Published:** 2026-09-30 08:57
 **Score:** 96
 
 
 
 ---
 
-## Made by Mechanical Means
+## Bild AI (YC W25) Is Hiring a Founding Product Engineer
 
 **Source:** hackernews
-**URL:** https://felixrieseberg.com/made-by-mechanical-means/
-**Published:** 2026-09-28 02:06
+**URL:** https://www.ycombinator.com/companies/bild-ai/jobs/dAbC3Gd-founding-product-engineer
+**Published:** 2026-09-30 12:00
+**Score:** 1
+
+
+
+---
+
+## Moist-Electric Wallpaper for Indoor Energy Harvesting and Humidity Management
+
+**Source:** hackernews
+**URL:** https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.71603
+**Published:** 2026-09-30 10:54
+**Score:** 47
+
+
+
+---
+
+## SDF vs. MSDF vs. Slug: GPU Text Rendering
+
+**Source:** hackernews
+**URL:** https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/
+**Published:** 2026-09-30 08:50
+**Score:** 107
+
+
+
+---
+
+## SDF Public Access Unix System ... est. 1987
+
+**Source:** hackernews
+**URL:** https://sdf.org/
+**Published:** 2026-09-30 09:36
+**Score:** 64
+
+
+
+---
+
+## Carnegie Mellon University Announces Historic $3B Gift from Ken Griffin
+
+**Source:** hackernews
+**URL:** https://www.cmu.edu/news/stories/archives/2026/september/carnegie-mellon-university-announces-historic-3-billion-gift-from-ken-griffin-pioneering-a-new-model
+**Published:** 2026-09-30 13:06
+**Score:** 11
+
+
+
+---
+
+## Reverse-engineering a $35 backup camera display (AMT630A)
+
+**Source:** hackernews
+**URL:** https://github.com/mogrinz/AMT630A
+**Published:** 2026-09-28 16:06
+**Score:** 58
+
+
+
+---
+
+## LinkedIn Larpmaxxing
+
+**Source:** hackernews
+**URL:** https://hereticpleb.vercel.app/blog/linkedin-larpmaxxing/
+**Published:** 2026-09-29 23:19
+**Score:** 111
+
+
+
+---
+
+## America.gov goes crazy on "play Minecraft"
+
+**Source:** hackernews
+**URL:** https://america.gov/chat
+**Published:** 2026-09-30 14:34
+**Score:** 54
+
+
+
+---
+
+## Dear Software Makers
+
+**Source:** hackernews
+**URL:** https://blog.jim-nielsen.com/2026/dear-software-makers/
+**Published:** 2026-09-30 14:45
+**Score:** 5
+
+
+
+---
+
+## Show HN: JBR-001 – An open-source 3D printable desktop robot
+
+**Source:** hackernews
+**URL:** https://projecthub.arduino.cc/syntheticaidata/jbr-001-a-desktop-companion-robot-powered-by-arduino-uno-q-b11c96
+**Published:** 2026-09-29 05:05
+**Score:** 115
+
+We built a desktop companion robot that is powered by Arduino UNO Q. Project is open source: source code, 3D printable files and assembly instructions are available at Arduino Project Hub.<p>Robot is 
+
+---
+
+## Show HN: Ledge.sh – Runnable Markdown Notes
+
+**Source:** hackernews
+**URL:** https://ledge.sh
+**Published:** 2026-09-29 18:41
+**Score:** 66
+
+Hi HN,<p>Ledge is a Markdown notebook that runs shell commands, code, SQL, etc from inside your own notes.<p>I built Ledge because I spend much of my day copy&#x2F;pasting commands from my notes into 
+
+---
+
+## Solving Factorio Quality
+
+**Source:** hackernews
+**URL:** https://exyr.org/2026/solving-factorio-quality/
+**Published:** 2026-09-28 21:27
+**Score:** 243
+
+
+
+---
+
+## Getting out of the way: my robotics crash course
+
+**Source:** hackernews
+**URL:** https://thisismypersonalblog.com/posts/2026-09-25-getting-out-of-the-way/
+**Published:** 2026-09-28 10:12
 **Score:** 61
 
 
 
 ---
 
-## The state of SIMD in Rust in 2026
+## Burning Man death rates – A short lesson in statistics
 
 **Source:** hackernews
-**URL:** https://shnatsel.github.io/state-of-simd-rust-2026/
-**Published:** 2026-09-25 08:46
-**Score:** 193
+**URL:** https://ihavenapkinthoughts.substack.com/p/burning-man-death-rates-a-short-lesson
+**Published:** 2026-09-28 13:57
+**Score:** 72
+
+
+
+---
+
+## Understanding the Dual Polytope for Hull Simplification
+
+**Source:** hackernews
+**URL:** https://cairnc.github.io/posts/understanding-the-dual-polytope/
+**Published:** 2026-09-29 09:27
+**Score:** 5
+
+
+
+---
+
+## Vermont replacing power plants with home batteries
+
+**Source:** hackernews
+**URL:** https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms
+**Published:** 2026-09-29 13:19
+**Score:** 363
+
+See also <a href="https:&#x2F;&#x2F;electrek.co&#x2F;2026&#x2F;07&#x2F;28&#x2F;vermonts-largest-energy-source-is-now-a-virtual-power-plant&#x2F;" rel="nofollow">https:&#x2F;&#x2F;electrek.co&#x2F;2026
+
+---
+
+## Mathematical Origami
+
+**Source:** hackernews
+**URL:** https://mathigon.org/origami
+**Published:** 2026-09-29 01:45
+**Score:** 108
 
 
 

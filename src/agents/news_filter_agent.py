@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from src.agents.base_agent import BaseAgent
+from src.agents.base_agent import BaseAgent, describe_llm_error, is_retryable_error
 
 
 class NewsFilterAgent(BaseAgent):
@@ -15,9 +15,19 @@ class NewsFilterAgent(BaseAgent):
         self,
         model: Optional[str] = None,
         tools: Optional[List[Dict]] = None,
+        max_articles: Optional[int] = None,
     ):
+        """
+        Args:
+            model: LiteLLM model string.
+            tools: Optional tool schemas exposed to the LLM.
+            max_articles: Only judge the first N articles. The filter makes
+                one LLM call per article, so this keeps a run inside free-tier
+                rate limits. None means "judge everything".
+        """
         super().__init__(model=model, tools=tools)
         self.relevance_threshold = 6
+        self.max_articles = max_articles
 
     async def _load_context(
         self,
@@ -32,6 +42,10 @@ class NewsFilterAgent(BaseAgent):
 
         content = path.read_text(encoding="utf-8")
         articles = self._parse_markdown(content)
+
+        if self.max_articles is not None:
+            articles = articles[: self.max_articles]
+            print(f"   Limiting to {len(articles)} articles (max_articles)")
 
         print(f"   Found {len(articles)} articles")
         return {"articles": articles}
@@ -99,7 +113,7 @@ class NewsFilterAgent(BaseAgent):
             # Stop instead of reporting it as "not relevant".
             if judgment.get("relevance_score") == 0:
                 raise RuntimeError(
-                    f"No se pudo evaluar '{article['title']}': "
+                    f"No se pudo evaluar '{article['title']}':\n"
                     f"{judgment.get('reasoning', 'error desconocido')}"
                 )
 
@@ -197,7 +211,26 @@ Return only the JSON object.
 """
 
         try:
-            response = self._call_llm(prompt)
+            import time
+
+            response = None
+            for attempt in range(3):
+                try:
+                    # A judgement is a small JSON object; capping output keeps
+                    # the call inside providers' per-minute output limits.
+                    response = self._call_llm(prompt, max_tokens=400)
+                    break
+                except Exception as llm_exc:
+                    # Auth/quota/unknown-model failures are deterministic, so
+                    # retrying them only burns time and rate-limit budget.
+                    if attempt == 2 or not is_retryable_error(llm_exc):
+                        raise
+                    wait = 5 * (attempt + 1)
+                    print(
+                        f"      ⚠️ LLM error ({llm_exc.__class__.__name__}), "
+                        f"retrying in {wait}s..."
+                    )
+                    time.sleep(wait)
 
             if not response:
                 raise ValueError("LLM returned an empty response")
@@ -233,7 +266,7 @@ Return only the JSON object.
             return judgment
 
         except Exception as exc:
-            print(f"      ⚠️ Failed to judge article: {exc}")
+            print(f"      ⚠️ Failed to judge article: {describe_llm_error(exc)}")
             return {
                 "relevant": False,
                 "relevance_score": 0,
