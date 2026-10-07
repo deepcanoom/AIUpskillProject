@@ -1,0 +1,123 @@
+{
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "mean_score_error": 0.3,
+    "correct_predictions": 10,
+    "total_predictions": 10
+  },
+  "detailed_results": [
+    {
+      "id": 1,
+      "title": "GPT-4 Released by OpenAI",
+      "expected_relevant": true,
+      "predicted_relevant": true,
+      "expected_score": 10,
+      "predicted_score": 10,
+      "score_error": 0,
+      "correct": true,
+      "reason": "Core AI/ML development"
+    },
+    {
+      "id": 2,
+      "title": "New JavaScript Framework Released",
+      "expected_relevant": false,
+      "predicted_relevant": false,
+      "expected_score": 1,
+      "predicted_score": 1,
+      "score_error": 0,
+      "correct": true,
+      "reason": "Web development, not AI"
+    },
+    {
+      "id": 3,
+      "title": "Machine Learning in Healthcare Breakthrough",
+      "expected_relevant": true,
+      "predicted_relevant": true,
+      "expected_score": 9,
+      "predicted_score": 9,
+      "score_error": 0,
+      "correct": true,
+      "reason": "ML application in important domain"
+    },
+    {
+      "id": 4,
+      "title": "Docker 25 Released",
+      "expected_relevant": false,
+      "predicted_relevant": false,
+      "expected_score": 2,
+      "predicted_score": 1,
+      "score_error": 1,
+      "correct": true,
+      "reason": "DevOps, not directly AI"
+    },
+    {
+      "id": 5,
+      "title": "Stable Diffusion 3.0 Improves Image Generation",
+      "expected_relevant": true,
+      "predicted_relevant": true,
+      "expected_score": 10,
+      "predicted_score": 10,
+      "score_error": 0,
+      "correct": true,
+      "reason": "Core AI/generative models"
+    },
+    {
+      "id": 6,
+      "title": "PostgreSQL 16 Features",
+      "expected_relevant": false,
+      "predicted_relevant": false,
+      "expected_score": 1,
+      "predicted_score": 1,
+      "score_error": 0,
+      "correct": true,
+      "reason": "Database, not AI"
+    },
+    {
+      "id": 7,
+      "title": "Neural Network Optimizes Traffic Flow",
+      "expected_relevant": true,
+      "predicted_relevant": true,
+      "expected_score": 8,
+      "predicted_score": 8,
+      "score_error": 0,
+      "correct": true,
+      "reason": "AI application in real-world problem"
+    },
+    {
+      "id": 8,
+      "title": "Recipe for Perfect Pizza Dough",
+      "expected_relevant": false,
+      "predicted_relevant": false,
+      "expected_score": 0,
+      "predicted_score": 1,
+      "score_error": 1,
+      "correct": true,
+      "reason": "Food/cooking, not AI"
+    },
+    {
+      "id": 9,
+      "title": "Transformer Architecture Explained",
+      "expected_relevant": true,
+      "predicted_relevant": true,
+      "expected_score": 9,
+      "predicted_score": 9,
+      "score_error": 0,
+      "correct": true,
+      "reason": "Core AI/ML architecture"
+    },
+    {
+      "id": 10,
+      "title": "AI Ethics Guidelines Published",
+      "expected_relevant": true,
+      "predicted_relevant": true,
+      "expected_score": 7,
+      "predicted_score": 8,
+      "score_error": 1,
+      "correct": true,
+      "reason": "AI governance and ethics"
+    }
+  ]
+}
