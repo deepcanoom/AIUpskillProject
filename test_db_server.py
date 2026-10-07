@@ -1,5 +1,8 @@
 """Test database MCP server."""
 import asyncio
+import sys
+from pathlib import Path
+
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
@@ -9,8 +12,8 @@ async def test_database_server():
     print("🔌 Connecting to database server...")
 
     server_params = StdioServerParameters(
-        command="python",
-        args=["src/mcp/database_server.py"]
+        command=sys.executable,
+        args=[str(Path(__file__).resolve().parent / "src" / "mcp" / "database_server.py")],
     )
 
     async with stdio_client(server_params) as (read, write):
@@ -45,4 +48,7 @@ async def test_database_server():
 
 
 if __name__ == "__main__":
+    # Windows console (cp1252) can't encode emojis in print output
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     asyncio.run(test_database_server())
