@@ -1,76 +1,83 @@
-"""Hello World MCP server using low-level MCP SDK constructor handlers."""
+"""Hello World MCP server using the low-level MCP SDK."""
 
 import asyncio
+import sys
+from typing import Any, Dict, List
+
 from mcp.server import Server
 from mcp.server.stdio import stdio_server
-from mcp.types import Tool, TextContent, ListToolsResult, CallToolResult
+from mcp.types import TextContent, Tool
+
+server = Server("hello-world")
+
+# Some names get a warmer welcome than others.
+_KNOWN_GUESTS = {
+    "deepcanoom": "Hello, deepcanoom! 🛶 You found the paddle — this server remembers who built it.",
+}
 
 
-# 1. Definir los manejadores con la firma correcta: async (ctx, params) -> result
-async def handle_list_tools(ctx, params) -> ListToolsResult:
+@server.list_tools()
+async def list_tools() -> List[Tool]:
     """List available tools."""
-    return ListToolsResult(
-        tools=[
-            Tool(
-                name="greet",
-                description="Greet someone by name",
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "Name of person to greet",
-                        }
-                    },
-                    "required": ["name"],
+    return [
+        Tool(
+            name="greet",
+            description="Greet someone by name",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Name of person to greet",
+                    }
                 },
-            ),
-            Tool(
-                name="add",
-                description="Add two numbers",
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "a": {"type": "number", "description": "First number"},
-                        "b": {"type": "number", "description": "Second number"},
-                    },
-                    "required": ["a", "b"],
+                "required": ["name"],
+            },
+        ),
+        Tool(
+            name="add",
+            description="Add two numbers",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "a": {"type": "number", "description": "First number"},
+                    "b": {"type": "number", "description": "Second number"},
                 },
-            ),
-        ]
-    )
+                "required": ["a", "b"],
+            },
+        ),
+    ]
 
 
-async def handle_call_tool(ctx, params) -> CallToolResult:
+@server.call_tool()
+async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
     """Execute a tool."""
-    name = params.name
-    arguments = params.arguments or {}
+    arguments = arguments or {}
 
     if name == "greet":
         person_name = arguments.get("name", "World")
-        greeting = f"Hello, {person_name}! 👋"
-        return CallToolResult(content=[TextContent(type="text", text=greeting)])
+        greeting = _KNOWN_GUESTS.get(
+            person_name.strip().lower(), f"Hello, {person_name}! 👋"
+        )
+        return [TextContent(type="text", text=greeting)]
 
-    elif name == "add":
+    if name == "add":
         a = arguments.get("a", 0)
         b = arguments.get("b", 0)
-        result = a + b
-        return CallToolResult(
-            content=[TextContent(type="text", text=f"{a} + {b} = {result}")]
-        )
+        return [TextContent(type="text", text=f"{a} + {b} = {a + b}")]
 
-    else:
-        raise ValueError(f"Unknown tool: {name}")
-
-
-# 2. Registrar los manejadores directamente en el constructor del Server
-server = Server(
-    "hello-world", on_list_tools=handle_list_tools, on_call_tool=handle_call_tool
-)
+    raise ValueError(f"Unknown tool: {name}")
 
 
 async def main():
     """Run the server."""
+    # mcp 1.1.2 wraps sys.stdin/sys.stdout as they are. On Windows a pipe
+    # defaults to cp1252, so any emoji or accented title in a response would
+    # crash the writer and leave the client waiting forever.
+    for stream in (sys.stdin, sys.stdout):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+
     async with stdio_server() as (read_stream, write_stream):
         await server.run(
             read_stream, write_stream, server.create_initialization_options()
