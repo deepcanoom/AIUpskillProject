@@ -1,18 +1,26 @@
 """SQLite database manager for articles."""
 
+import os
 import sqlite3
+import sys
 import aiosqlite
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Optional
 from datetime import datetime
+
+# Env var that overrides the default database location. The MCP server runs
+# in a separate process, so this is how SearchSkill (and tests) point it at
+# a specific database file.
+DB_PATH_ENV_VAR = "NEWS_AGENT_DB"
+DEFAULT_DB_PATH = "data/news_agent.db"
 
 
 class DatabaseManager:
     """Manages SQLite database for articles."""
 
-    def __init__(self, db_path: str = "data/news_agent.db"):
-        self.db_path = db_path
-        Path(db_path).parent.mkdir(parents=True, exist_ok=True)
+    def __init__(self, db_path: Optional[str] = None):
+        self.db_path = db_path or os.getenv(DB_PATH_ENV_VAR, DEFAULT_DB_PATH)
+        Path(self.db_path).parent.mkdir(parents=True, exist_ok=True)
 
     async def initialize(self):
         """Create tables if they don't exist."""
@@ -41,7 +49,10 @@ class DatabaseManager:
 
             await db.commit()
 
-        print(f"Database initialized: {self.db_path}")
+        # stderr, not stdout: the MCP database server calls this, and on the
+        # stdio transport stdout is the JSON-RPC channel — a stray print
+        # there corrupts the protocol stream.
+        print(f"Database initialized: {self.db_path}", file=sys.stderr)
 
     async def insert_article(self, article: Dict):
         """Insert article into database."""
