@@ -17,6 +17,10 @@ import os
 import sys
 from pathlib import Path
 
+# Reuse the agent's provider→key mapping so this script and the pipeline can
+# never disagree about which key belongs to which model.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from src.agents.base_agent import PROVIDER_KEY_ENV_VARS
 
 REQUIRED_PYTHON = (3, 11)
 REQUIRED_PACKAGES = [
@@ -27,7 +31,12 @@ REQUIRED_PACKAGES = [
     "dotenv",  # python-dotenv exposes itself as `dotenv`
     "pytest",
 ]
-PROVIDER_KEYS = ("ANTHROPIC_API_KEY", "OPENAI_API_KEY", "GEMINI_API_KEY")
+PROVIDER_KEYS = (
+    "ANTHROPIC_API_KEY",
+    "OPENAI_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+)
 
 
 def fail(msg: str, fix: str = "") -> None:
@@ -101,6 +110,18 @@ def check_env() -> tuple[str, str]:
             "API keys: no provider key set",
             f"Uncomment and fill one of {', '.join(PROVIDER_KEYS)} in .env.",
         )
+    # A key from a *different* provider than the model is the single most
+    # common cause of "invalid x-api-key", so check the pairing explicitly.
+    expected = PROVIDER_KEY_ENV_VARS.get(model.split("/", 1)[0].lower())
+    if expected and not any(os.getenv(k) for k in expected):
+        fail(
+            f"LITELLM_MODEL ({model}) has no matching key",
+            f"Set one of: {', '.join(expected)} in .env. "
+            f"Keys for other providers ({provider_key}) will be rejected.",
+        )
+    if expected:
+        print(f"✅ Model/key pairing: {model.split('/', 1)[0]} matches {expected[0]}")
+
     print("✅ API keys: Configured")
     return model, provider_key
 
@@ -136,7 +157,7 @@ def check_litellm_completion(model: str) -> None:
         resp = completion(
             model=model,
             messages=[{"role": "user", "content": "Reply with just: OK"}],
-            max_tokens=10,
+            max_tokens=16,
         )
         # LiteLLM normalizes to OpenAI-style responses
         text = resp["choices"][0]["message"]["content"].strip()
@@ -173,4 +194,9 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # This script prints emoji; Windows consoles default to cp1252 and would
+    # raise UnicodeEncodeError on them.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     main()
